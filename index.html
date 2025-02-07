@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARAVAN</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: #e0e1dd;
+            font-family: Arial, sans-serif;
+            line-height: 1.75;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header, section {
+            padding: 20px;
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+            background: transparent;
+        }
+        header {
+            background: transparent;
+            padding: 40px 20px;
+            position: relative;
+        }
+        h1, .experimental {
+            color: orange;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        h2 {
+            margin-top: 10px;
+            font-size: 1.4em;
+            font-weight: normal;
+            color: #e0e1dd;
+        }
+        section {
+            background: transparent;
+            margin: 10px 0;
+            padding: 20px;
+        }
+        input[type="email"] {
+            padding: 14px;
+            margin: 10px 0;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #444;
+            border-radius: 8px;
+            background: #1b263b;
+            color: #e0e1dd;
+        }
+   button {
+    padding: 15px 30px;
+    background: #FFBB33; /* Более мягкий оранжевый */
+    color: #fff; /* Белый текст */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.15s ease, transform 0.1s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(255, 187, 51, 0.4);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4); /* Увеличенная тень у текста */
+}
+
+button:active {
+    background: #CC7700; /* Тёмный янтарный при нажатии */
+    transform: scale(0.96);
+    box-shadow: 0 2px 8px rgba(204, 119, 0, 0.6);
+}
+
+        
+        .rules-list p {
+            margin: 16px 0;
+            font-size: 1.2em;
+        }
+        .rules-divider {
+            height: 2px;
+            background-color: orange;
+            margin: 5px auto;
+            width: 20px;
+        }
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: black;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .star {
+            position: absolute;
+            background: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        footer {
+            color: #777;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: orange;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #415a77;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .archive-label {
+    color: #FFAA00; /* Оранжевый в тон кнопкам */
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+.archive-label:hover {
+    color: #CC7700; /* Тёмно-оранжевый при наведении */
+}
+
+        .experimental {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+        #emailForm {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="starContainer"></div>
+    <header>
+        <h1>KARAVAN</h1>
+        <p class="experimental">EXPERIMENTAL GAZETTE SECURED BY MULTI-LAYER ENCRYPTION</p>
+        <h2>Freedom of speech is under threat like never before<br>Keep speaking about what matters</h2>
+        <nav>
+            <div class="dropdown">
+                <span class="archive-label">Archive</span>
+                <div class="dropdown-content">
+                    <a href="past-stories.html">Past Stories</a>
+                    <a href="about.html">About Us</a>
+                    <a href="privacy.html">Privacy</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <button onclick="showEmailForm()">SUBSCRIBE</button>
+        <div id="emailForm">
+            <input type="email" id="email" placeholder="Enter your email">
+            <button onclick="subscribe()">CONFIRM</button>
+        </div>
+    </section>
+
+    <section id="rules">
+        <h2 style="color: orange;">KARAVAN RULES</h2>
+        <div class="rules-list">
+            <p>No ads. Ever</p>
+            <div class="rules-divider"></div>
+            <p>Every word is human-made</p>
+            <div class="rules-divider"></div>
+            <p>No hate or discrimination<br>(We're fed up with this irl)</p>
+        </div>
+    </section>
+
+    <footer>
+        KARAVAN 2025 © No rights reserved. Including yours.
+    </footer>
+
+    <script>
+        function createStars() {
+            const starContainer = document.getElementById('starContainer');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.top = Math.random() * 100 + '%';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.animationDuration = (Math.random() * 2 + 1) + 's';
+                starContainer.appendChild(star);
+            }
+        }
+        createStars();
+
+        function showEmailForm() {
+            const emailForm = document.getElementById('emailForm');
+            emailForm.style.display = emailForm.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function subscribe() {
+            const emailInput = document.getElementById('email');
+            const email = emailInput.value.trim();
+            
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            fetch('https://formspree.io/f/xdkazqbl', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: email })
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Successfully subscribed!');
+                    emailInput.value = "";
+                } else {
+                    throw new Error('Subscription failed.');
+                }
+            })
+            .catch(error => alert('Error: ' + error.message));
+        }
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+    </script>
+</body>
+</html>
