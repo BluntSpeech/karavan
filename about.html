@@ -14,31 +14,24 @@
             font-family: Arial, sans-serif;
             line-height: 1.75;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row;
             justify-content: center;
+            align-items: flex-start;
             min-height: 100vh;
-            text-align: center;
+            text-align: left;
             width: 100vw;
             overflow-x: hidden;
-        }
-        header {
-            padding: 40px 20px;
-            width: 100%;
-        }
-        h1 {
-            font-size: 2.5em;
-            color: orange;
-            text-align: center;
+            padding: 20px;
         }
         .content {
-            max-width: 800px;
+            max-width: 600px;
             padding: 20px;
-            text-align: center;
+            margin-right: 20px;
         }
         p {
             font-size: 1.2em;
             color: #e0e1dd;
+            margin-left: 20px;
         }
         .stars {
             position: fixed;
@@ -52,21 +45,22 @@
             color: #777;
             font-size: 0.9em;
             margin-top: 20px;
-            text-align: center;
+            text-align: left;
+            margin-left: 20px;
         }
         .highlight {
             color: yellow;
             font-weight: bold;
         }
         .image-container {
-            margin-top: 20px;
             display: flex;
             justify-content: center;
-            width: 100%;
+            align-items: center;
+            width: 40%;
+            max-width: 500px;
         }
         .image-container img {
-            width: 80%;
-            max-width: 600px;
+            width: 100%;
             height: auto;
             border-radius: 10px;
         }
@@ -74,10 +68,8 @@
 </head>
 <body>
     <div class="stars" id="starContainer"></div>
-    <header>
-        <h1>ABOUT US</h1>
-    </header>
     <div class="content">
+        <h1>ABOUT US</h1>
         <p style="line-height: 1.4;">Why do I look like my father if I hate him?<br>
         What is it like to beg for money on the streets of New York?<br>
         What does a typical day in a "gay conversion camp" look like?<br>
@@ -105,12 +97,13 @@
 
         <p>More on privacy and opinion protection HERE (link).</p>
         <p>Stay strong in these times.</p>
+
+        <footer>
+            KARAVAN 2025 © No rights reserved. Including yours.
+        </footer>
     </div>
     <div class="image-container">
         <img src="image.png" alt="Karavan Observatory">
     </div>
-    <footer>
-        KARAVAN 2025 © No rights reserved. Including yours.
-    </footer>
 </body>
 </html>
