@@ -8,69 +8,47 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
+            padding: 20px;
             background: black;
             color: #e0e1dd;
             font-family: Arial, sans-serif;
             line-height: 1.75;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
             text-align: left;
             width: 100vw;
             overflow-x: hidden;
-            padding: 20px;
         }
         .content {
             max-width: 600px;
-            padding: 20px;
-            margin-right: 20px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: orange;
+            text-align: left;
+            margin-bottom: 20px;
         }
         p {
             font-size: 1.2em;
             color: #e0e1dd;
-            margin-left: 20px;
+            margin-bottom: 20px;
         }
-        .stars {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            background: black;
-            overflow: hidden;
-            z-index: -1;
+        .highlight {
+            color: orange;
+            font-weight: bold;
         }
         footer {
             color: #777;
             font-size: 0.9em;
-            margin-top: 20px;
+            margin-top: 40px;
             text-align: left;
-            margin-left: 20px;
-        }
-        .highlight {
-            color: yellow;
-            font-weight: bold;
-        }
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40%;
-            max-width: 500px;
-        }
-        .image-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="stars" id="starContainer"></div>
     <div class="content">
         <h1>ABOUT US</h1>
-        <p style="line-height: 1.4;">Why do I look like my father if I hate him?<br>
+        
+        <p>Why do I look like my father if I hate him?<br>
         What is it like to beg for money on the streets of New York?<br>
         What does a typical day in a "gay conversion camp" look like?<br>
         How does a private school break your mind and destroy your health?</p>
@@ -79,31 +57,27 @@
 
         <p>Stories that once mattered, spaces that once belonged to real people—hollowed out, repurposed, and sold back to us as propaganda.</p>
 
-        <p>As the editors of Karavan, we are fucking tired.</p>
+        <p><span class="highlight">As the editors of Karavan, we are fucking tired.</span></p>
         
         <p>We miss the internet as it used to be. And we want to bring back what it was made for—you.<br>
         With your ideas, fears, struggles—but most importantly, with your opinion.</p>
 
         <p>Every article you see here is a story told by a real person. No hidden sponsors. No agendas. No editorial "guidelines." We protect anonymity. We protect our writers.</p>
 
-        <p>Let go. Listen to others without demanding answers. Take in their experiences without needing something in return. And if you ever feel like sharing—send us your story.</p>
+        <p><span class="highlight">Let go.</span> Listen to others without demanding answers. Take in their experiences without needing something in return. And if you ever feel like sharing—send us your story.</p>
 
-        <h2>IMPORTANT</h2>
+        <h2 class="highlight">IMPORTANT</h2>
         <p>1. For now, please avoid leaving comments that could expose your identity.</p>
         <p>2. Each post has a view counter. We do not track personal data or store info on who viewed what.</p>
         <p>3. For philosophical discussions or to submit your own story, write to us here (FORM).</p>
         
         <p><span class="highlight">Be kind. A real person will read your message.</span></p>
 
-        <p>More on privacy and opinion protection HERE (link).</p>
-        <p>Stay strong in these times.</p>
-
-        <footer>
-            KARAVAN 2025 © No rights reserved. Including yours.
-        </footer>
+        <p>More on <span class="highlight">privacy and opinion protection HERE (link).</span></p>
+        <p><span class="highlight">Stay strong in these times.</span></p>
     </div>
-    <div class="image-container">
-        <img src="image.png" alt="Karavan Observatory">
-    </div>
+    <footer>
+        KARAVAN 2025 © No rights reserved. Including yours.
+    </footer>
 </body>
 </html>
