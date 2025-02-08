@@ -122,6 +122,8 @@
             display: none;
             text-align: center;
             margin-top: 10px;
+            opacity: 1;
+            transition: opacity 0.5s ease-out;
         }
 
         input[type="email"] {
@@ -211,6 +213,7 @@
         function subscribe() {
             const emailInput = document.getElementById('email');
             const email = emailInput.value.trim();
+            const emailForm = document.getElementById('emailForm');
             
             if (!validateEmail(email)) {
                 alert("Please enter a valid email address.");
@@ -227,13 +230,25 @@
             .then(response => {
                 if (response.ok) {
                     alert('Successfully subscribed!');
+
+                    // Плавное сворачивание формы
+                    emailForm.style.opacity = "0";
+                    setTimeout(() => {
+                        emailForm.style.display = 'none';
+                        emailForm.style.opacity = "1";
+                    }, 500);
+
                     emailInput.value = "";
-                    document.getElementById('emailForm').style.display = 'none';
                 } else {
                     throw new Error('Subscription failed.');
                 }
             })
             .catch(error => alert('Error: ' + error.message));
+        }
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
         }
     </script>
 </body>
