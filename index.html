@@ -26,16 +26,18 @@
         }
         .top-menu {
             display: flex;
-            justify-content: center;
-            gap: 3px; /* Ещё меньше расстояние между кнопками */
-            margin-bottom: 10px;
-            flex-wrap: wrap; /* Чтобы на маленьких экранах не сжимались */
+            justify-content: center; /* Центрирование кнопок */
+            gap: 5px; /* Минимальный зазор между кнопками */
+            max-width: 350px; /* Ограничение ширины контейнера */
+            width: 100%;
+            margin: 0 auto 10px; /* Выравнивание */
+            flex-wrap: wrap; /* Адаптация для мобильных */
         }
         .menu-button {
             background: none;
             border: 2px solid orange;
-            padding: 8px 10px; /* Сократил padding, чтобы они стали компактнее */
-            font-size: 0.9em; /* Сделал текст меньше */
+            padding: 8px 10px;
+            font-size: 0.9em;
             font-weight: bold;
             color: orange;
             cursor: pointer;
@@ -226,11 +228,6 @@
                 }
             })
             .catch(error => alert('Error: ' + error.message));
-        }
-
-        function validateEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
         }
     </script>
 </body>
