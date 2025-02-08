@@ -26,13 +26,26 @@
         }
         .top-menu {
             display: flex;
-            justify-content: center; /* Центрирование кнопок */
-            gap: 5px; /* Минимальный зазор между кнопками */
-            max-width: 350px; /* Ограничение ширины контейнера */
+            justify-content: center;
+            gap: 5px;
+            max-width: 350px;
             width: 100%;
-            margin: 0 auto 10px; /* Выравнивание */
-            flex-wrap: wrap; /* Адаптация для мобильных */
+            margin: 0 auto 10px;
+            flex-wrap: wrap;
         }
+
+        .menu-button:nth-child(2) {
+            order: -1; /* "Privacy" слева */
+        }
+
+        .menu-button:nth-child(3) {
+            order: 0; /* "Past Stories" в центре */
+        }
+
+        .menu-button:nth-child(1) {
+            order: 1; /* "About Us" справа */
+        }
+
         .menu-button {
             background: none;
             border: 2px solid orange;
@@ -44,10 +57,12 @@
             transition: background 0.2s ease, color 0.2s ease;
             text-transform: uppercase;
         }
+
         .menu-button:hover {
             background: orange;
             color: black;
         }
+
         h1, .experimental {
             color: orange;
             font-weight: bold;
