@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>About Us - KARAVAN</title>
+    <title>KARAVAN</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <style>
         html, body {
@@ -13,10 +13,9 @@
             color: #e0e1dd;
             font-family: Arial, sans-serif;
             line-height: 1.75;
-            text-align: left;
+            text-align: center;
             max-width: 100vw;
-            overflow-x: hidden; /* Убираем горизонтальную прокрутку */
-            overscroll-behavior: contain;
+            overflow-x: hidden;
         }
 
         @media screen and (orientation: landscape) {
@@ -25,72 +24,50 @@
             }
         }
 
-        .content {
-            max-width: 600px;
-            margin: 0 auto;
+        .top-menu {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            max-width: 350px;
+            width: 100%;
+            margin: 0 auto 10px;
+            flex-wrap: wrap;
         }
 
-        h1 {
-            font-size: 2.5em;
+        .menu-button {
+            background: none;
+            border: 2px solid orange;
+            padding: 8px 10px;
+            font-size: 0.9em;
+            font-weight: bold;
             color: orange;
-            text-align: left;
-            margin-bottom: 20px;
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease;
+            text-transform: uppercase;
         }
 
-        p {
-            font-size: 1.2em;
-            color: #e0e1dd;
-            margin-bottom: 20px;
+        .menu-button:hover {
+            background: orange;
+            color: black;
         }
 
-        .highlight {
+        h1, .experimental {
             color: orange;
             font-weight: bold;
         }
 
-        .final-block {
-            text-align: left;
-            margin-top: 40px;
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
         }
 
-        footer {
-            color: #777;
-            font-size: 0.9em;
-            margin-top: 40px;
-            text-align: center;
+        h2 {
+            margin-top: 10px;
+            font-size: 1.4em;
+            font-weight: normal;
+            color: #e0e1dd;
         }
 
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-            .content {
-                max-width: 90%;
-            }
-            h1 {
-                font-size: 2em;
-            }
-            p {
-                font-size: 1.1em;
-            }
-            footer {
-                font-size: 0.8em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8em;
-            }
-            p {
-                font-size: 1em;
-            }
-            .content {
-                max-width: 95%;
-            }
-        }
-
-        /* Кнопка AGREE и форма */
         .subscribe-container {
             text-align: center;
             margin-top: 30px;
@@ -134,59 +111,88 @@
             font-size: 1.2em;
             margin-bottom: 10px;
         }
+
+        footer {
+            color: #777;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: black;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1>ABOUT US</h1>
-        
-        <p><span class="highlight">Why do I look like my father if I hate him?</span><br>
-        What does a typical day in a "gay conversion camp" look like?<br>
-        How does a private school break your mind and destroy your health?</p>
+    <div class="stars" id="starContainer"></div>
 
-        <p><span class="highlight">We live in the era of post-truth</span>. Believing the words on the other side of the screen is no longer possible. We are bombarded with pre-packaged headlines, curated images, and articles that are designed to convince us of a perspective <span class="highlight">they want you to believe</span>.</p>
-
-        <p>Stories that once mattered, spaces that once belonged to real people—hollowed out, repackaged, and sold back to us as propaganda.</p>
-
-        <p><span class="highlight">As the editors of Karavan, we are fucking tired.</span></p>
-        
-        <p>We miss the internet as it used to be.<br>
-        And we want to bring back what it was made for—<span class="highlight">you</span>.</p>
-
-        <p>Every article you see here is a story told by a real person. <br>
-        No hidden sponsors. No agendas. No editorial "guidelines."<br>
-        We protect anonymity. We protect our writers.</p>
-
-        <p>Listen to others without demanding answers.<br> 
-        Take in experiences without feeling the need to give anything in return.<br>
-        And if you ever feel like sharing—send us your story.</p>
-
-        <h2 class="highlight">IMPORTANT</h2>
-        <p>1. Please avoid leaving comments that could expose your identity.</p>
-        <p>2. Each post has a view counter. We do not track personal data or store info on who viewed what.</p>
-        <p>3. For philosophical discussions or to submit your own story, write to us <span class="highlight">here</span>. Be kind. A real person will read your message.</p>
-
-        <p>More on privacy and opinion protection <span class="highlight">here</span>.</p>
-        
-        <div class="final-block">
-            <p><span class="highlight">Yours,</span><br>
-            Karavan</p>
+    <header>
+        <div class="top-menu">
+            <button class="menu-button" onclick="location.href='about.html'">About Us</button>
+            <button class="menu-button" onclick="location.href='privacy.html'">Privacy</button>
+            <button class="menu-button" onclick="location.href='past-stories.html'">Past Stories</button>
         </div>
+        <h1>KARAVAN</h1>
+        <p class="experimental">EXPERIMENTAL GAZETTE SECURED BY MULTI-LAYER ENCRYPTION</p>
+        <h2>Freedom of speech is under threat<br>Keep speaking about what matters</h2>
+    </header>
 
-        <div class="subscribe-container">
-            <button class="subscribe-button" onclick="showEmailForm()">AGREE</button>
-            <div id="emailForm">
-                <input type="email" id="email" placeholder="Enter your email">
-                <button class="subscribe-button" onclick="subscribe()">CONFIRM</button>
-            </div>
+    <section class="subscribe-container">
+        <button class="subscribe-button" onclick="showEmailForm()">AGREE</button>
+        <div id="emailForm">
+            <input type="email" id="email" placeholder="Enter your email">
+            <button class="subscribe-button" onclick="subscribe()">CONFIRM</button>
         </div>
-    </div>
+    </section>
+
+    <section id="rules">
+        <h2 style="color: orange;">KARAVAN RULES</h2>
+        <div class="rules-list">
+            <p>Ad-free forever</p>
+            <div class="rules-divider"></div>
+            <p>Every word is human-made</p>
+            <div class="rules-divider"></div>
+            <p>No hate or discrimination<br>(We're fed up with this irl)</p>
+        </div>
+    </section>
 
     <footer>
         KARAVAN 2025 © No rights reserved. Including yours.
     </footer>
 
     <script>
+        function createStars() {
+            const starContainer = document.getElementById('starContainer');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.top = Math.random() * 100 + '%';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.animationDuration = (Math.random() * 2 + 1) + 's';
+                starContainer.appendChild(star);
+            }
+        }
+        createStars();
+
         function showEmailForm() {
             document.getElementById('emailForm').style.display = 'block';
         }
@@ -219,4 +225,9 @@
         }
 
         function validateEmail(email) {
-            const re = /^[^\s@]+@[^
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+    </script>
+</body>
+</html>
