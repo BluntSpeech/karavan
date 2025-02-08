@@ -2,113 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KARAVAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>About Us - KARAVAN</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <style>
         html, body {
             margin: 0;
-            padding: 0;
+            padding: 20px;
             background: black;
             color: #e0e1dd;
             font-family: Arial, sans-serif;
             line-height: 1.75;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow-x: hidden; /* Убирает горизонтальную прокрутку */
-            max-width: 100vw; /* Ограничивает ширину */
-            position: relative;
+            text-align: left;
+            max-width: 100vw;
+            overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+            overscroll-behavior: contain;
         }
-        .stars-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
+
+        @media screen and (orientation: landscape) {
+            body {
+                transform: rotate(0deg);
+            }
         }
-        .stars, .stars-overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: black;
-            overflow: hidden;
+
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
         }
-        .stars-overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        .star {
-            position: absolute;
-            background: white;
-            width: 2px;
-            height: 2px;
-            border-radius: 50%;
-            animation: twinkle 2s infinite ease-in-out;
-        }
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
-        }
-        header {
-            background: transparent;
-            padding: 40px 20px;
-            width: 100%;
-            text-align: center;
-            position: relative;
-        }
-        .top-menu {
-            display: flex;
-            justify-content: center;
-            gap: 5px;
-            max-width: 350px;
-            width: 100%;
-            margin: 0 auto 10px;
-            flex-wrap: wrap;
-        }
-        .menu-button:nth-child(2) {
-            order: -1;
-        }
-        .menu-button:nth-child(3) {
-            order: 0;
-        }
-        .menu-button:nth-child(1) {
-            order: 1;
-        }
-        .menu-button {
-            background: none;
-            border: 2px solid orange;
-            padding: 8px 10px;
-            font-size: 0.9em;
-            font-weight: bold;
-            color: orange;
-            cursor: pointer;
-            transition: background 0.2s ease, color 0.2s ease;
-            text-transform: uppercase;
-        }
-        .menu-button:hover {
-            background: orange;
-            color: black;
-        }
-        h1, .experimental {
-            color: orange;
-            font-weight: bold;
-        }
+
         h1 {
             font-size: 2.5em;
-            margin: 0;
+            color: orange;
+            text-align: left;
+            margin-bottom: 20px;
         }
-        h2 {
-            margin-top: 10px;
-            font-size: 1.4em;
-            font-weight: normal;
+
+        p {
+            font-size: 1.2em;
             color: #e0e1dd;
+            margin-bottom: 20px;
         }
-        button {
+
+        .highlight {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .final-block {
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        footer {
+            color: #777;
+            font-size: 0.9em;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .content {
+                max-width: 90%;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1.1em;
+            }
+            footer {
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .content {
+                max-width: 95%;
+            }
+        }
+
+        /* Кнопка AGREE и форма */
+        .subscribe-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .subscribe-button {
             padding: 15px 30px;
             background: #FFBB33;
             color: #fff;
@@ -118,118 +106,117 @@
             cursor: pointer;
             font-size: 1.1em;
             transition: background 0.15s ease, transform 0.1s ease;
-            margin: 10px auto;
-            display: block;
             box-shadow: 0 4px 12px rgba(255, 187, 51, 0.4);
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
         }
-        button:active {
+
+        .subscribe-button:active {
             background: #CC7700;
             transform: scale(0.96);
             box-shadow: 0 2px 8px rgba(204, 119, 0, 0.6);
         }
-        .rules-list {
+
+        #emailForm {
+            display: none;
             text-align: center;
-            width: 100%;
+            margin-top: 10px;
         }
-        .rules-list p {
-            margin: 16px 0;
+
+        input[type="email"] {
+            padding: 16px;
+            width: 90%;
+            max-width: 500px;
+            border: 1px solid #444;
+            border-radius: 8px;
+            background: #1b263b;
+            color: #e0e1dd;
+            text-align: center;
             font-size: 1.2em;
-        }
-        .rules-divider {
-            height: 2px;
-            background-color: orange;
-            margin: 5px auto;
-            width: 20px;
-        }
-        #rules {
-            text-align: center;
-            margin-top: 30px;
-            position: relative;
-            width: 100%;
-            padding: 20px 0;
-        }
-        #rules::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: black;
-            z-index: -2;
-        }
-        .stars-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        footer {
-            color: #777;
-            font-size: 0.9em;
-            margin-top: 20px;
-            position: relative;
-            width: 100%;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="stars-container">
-        <div class="stars" id="starContainer"></div>
+    <div class="content">
+        <h1>ABOUT US</h1>
+        
+        <p><span class="highlight">Why do I look like my father if I hate him?</span><br>
+        What does a typical day in a "gay conversion camp" look like?<br>
+        How does a private school break your mind and destroy your health?</p>
+
+        <p><span class="highlight">We live in the era of post-truth</span>. Believing the words on the other side of the screen is no longer possible. We are bombarded with pre-packaged headlines, curated images, and articles that are designed to convince us of a perspective <span class="highlight">they want you to believe</span>.</p>
+
+        <p>Stories that once mattered, spaces that once belonged to real people—hollowed out, repackaged, and sold back to us as propaganda.</p>
+
+        <p><span class="highlight">As the editors of Karavan, we are fucking tired.</span></p>
+        
+        <p>We miss the internet as it used to be.<br>
+        And we want to bring back what it was made for—<span class="highlight">you</span>.</p>
+
+        <p>Every article you see here is a story told by a real person. <br>
+        No hidden sponsors. No agendas. No editorial "guidelines."<br>
+        We protect anonymity. We protect our writers.</p>
+
+        <p>Listen to others without demanding answers.<br> 
+        Take in experiences without feeling the need to give anything in return.<br>
+        And if you ever feel like sharing—send us your story.</p>
+
+        <h2 class="highlight">IMPORTANT</h2>
+        <p>1. Please avoid leaving comments that could expose your identity.</p>
+        <p>2. Each post has a view counter. We do not track personal data or store info on who viewed what.</p>
+        <p>3. For philosophical discussions or to submit your own story, write to us <span class="highlight">here</span>. Be kind. A real person will read your message.</p>
+
+        <p>More on privacy and opinion protection <span class="highlight">here</span>.</p>
+        
+        <div class="final-block">
+            <p><span class="highlight">Yours,</span><br>
+            Karavan</p>
+        </div>
+
+        <div class="subscribe-container">
+            <button class="subscribe-button" onclick="showEmailForm()">AGREE</button>
+            <div id="emailForm">
+                <input type="email" id="email" placeholder="Enter your email">
+                <button class="subscribe-button" onclick="subscribe()">CONFIRM</button>
+            </div>
+        </div>
     </div>
 
-    <header>
-        <div class="top-menu">
-            <button class="menu-button" onclick="location.href='about.html'">About Us</button>
-            <button class="menu-button" onclick="location.href='privacy.html'">Privacy</button>
-            <button class="menu-button" onclick="location.href='past-stories.html'">Past Stories</button>
-        </div>
-        <h1>KARAVAN</h1>
-        <p class="experimental">EXPERIMENTAL GAZETTE SECURED BY MULTI-LAYER ENCRYPTION</p>
-        <h2>Freedom of speech is under threat<br>Keep speaking about what matters</h2>
-    </header>
-
-    <section>
-        <button onclick="showEmailForm()">SUBSCRIBE</button>
-        <div id="emailForm">
-            <input type="email" id="email" placeholder="Enter your email">
-            <button onclick="subscribe()">CONFIRM</button>
-        </div>
-    </section>
-
-    <section id="rules">
-        <div class="stars-overlay"></div>
-        <h2 style="color: orange;">KARAVAN RULES</h2>
-        <div class="rules-list">
-            <p>Ad-free forever</p>  
-            <div class="rules-divider"></div>
-            <p>Every word is human-made</p>
-            <div class="rules-divider"></div>
-            <p>No hate or discrimination<br>(We're fed up with this irl)</p>
-        </div>
-    </section>
-
     <footer>
-        <div class="stars-overlay"></div>
         KARAVAN 2025 © No rights reserved. Including yours.
     </footer>
 
     <script>
-        function createStars(containerId) {
-            const starContainer = document.getElementById(containerId);
-            for (let i = 0; i < 100; i++) {
-                const star = document.createElement('div');
-                star.classList.add('star');
-                star.style.top = Math.random() * 100 + '%';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.animationDuration = (Math.random() * 2 + 1) + 's';
-                starContainer.appendChild(star);
-            }
+        function showEmailForm() {
+            document.getElementById('emailForm').style.display = 'block';
         }
-        createStars('starContainer');
-    </script>
-</body>
-</html>
+
+        function subscribe() {
+            const emailInput = document.getElementById('email');
+            const email = emailInput.value.trim();
+            
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            fetch('https://formspree.io/f/xdkazqbl', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: email })
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Successfully subscribed!');
+                    emailInput.value = "";
+                } else {
+                    throw new Error('Subscription failed.');
+                }
+            })
+            .catch(error => alert('Error: ' + error.message));
+        }
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^
