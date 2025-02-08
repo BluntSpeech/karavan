@@ -1,47 +1,174 @@
-<footer>
-    <div class="footer-container">
-        <div class="signature">
-            <p><span class="highlight">Yours,</span><br>Karavan</p>
-        </div>
-        <button class="back-button" onclick="location.href='index.html'">Back to Main</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>About Us - KARAVAN</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 20px;
+            background: black;
+            color: #e0e1dd;
+            font-family: Arial, sans-serif;
+            line-height: 1.75;
+            text-align: left;
+            max-width: 100vw;
+            overflow-x: hidden; 
+            overscroll-behavior: contain; 
+        }
+        
+        @media screen and (orientation: landscape) {
+            body {
+                transform: rotate(0deg);
+            }
+        }
+
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: orange;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #e0e1dd;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .final-block {
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        footer {
+            color: #777;
+            font-size: 0.9em;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .content {
+                max-width: 90%;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1.1em;
+            }
+            footer {
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .content {
+                max-width: 95%;
+            }
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 600px;
+            margin: 40px auto 10px;
+        }
+
+        .signature {
+            text-align: left;
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .back-button {
+            background: none;
+            border: 2px solid orange;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: orange;
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease;
+            text-transform: uppercase;
+        }
+
+        .back-button:hover {
+            background: orange;
+            color: black;
+        }
+
+        .rights-text {
+            margin-top: 10px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>ABOUT US</h1>
+        
+        <p><span class="highlight">Why do I look like my father if I hate him?</span> What does a typical day in a "gay conversion camp" look like? How does a private school break your mind and destroy your health?</p>
+
+        <p><span class="highlight">We live in the era of post-truth.</span> Bombarded with pre-packaged headlines, curated images, and articles that are designed to convince us of a perspective <span class="highlight">they want us to believe.</span></p>
+
+        <p>Stories that once mattered, spaces that once belonged to real people — hollowed out, repackaged, and sold back to us as propaganda.</p>
+
+        <p><span class="highlight">As the editors of Karavan, we are fucking tired.</span></p>
+        
+        <p>We miss the internet as it used to be.<br>
+        And we want to bring back what it was made for — <span class="highlight">you.</span></p>
+
+        <p>Every article you see here is a story told by a real person. No hidden sponsors. No agendas. No editorial guidelines.<br></p>
+
+        <p><span class="highlight">Listen to others without demanding answers. Take in experiences without feeling the need to give anything in return.</span><br></p>
+        <p>And if you ever feel like sharing — send us your story, and let it echo through the desert winds of this Karavan.</p>
+
+        <h2 class="highlight">IMPORTANT</h2>
+        <p>1. Please avoid leaving comments that could expose your identity.</p>
+        <p>2. Each post has a view counter. We do not track personal data or store info on who viewed what.</p>
+        <p>3. For philosophical discussions or to submit your own story, write to us <span class="highlight">here</span>. Be kind. A real person will read your message.</p>
+
+        <p>More on privacy and opinion protection <span class="highlight">here</span>.</p>
     </div>
-    <p class="rights-text">KARAVAN 2025 © No rights reserved.<br>Including yours.</p>
-</footer>
-
-<style>
-    .footer-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 600px;
-        margin: 40px auto 10px;
-    }
-
-    .signature {
-        text-align: left;
-    }
-
-    .back-button {
-        background: none;
-        border: 2px solid orange;
-        padding: 8px 12px;
-        font-size: 0.9em;
-        font-weight: bold;
-        color: orange;
-        cursor: pointer;
-        transition: background 0.2s ease, color 0.2s ease;
-        text-transform: uppercase;
-    }
-
-    .back-button:hover {
-        background: orange;
-        color: black;
-    }
-
-    .rights-text {
-        margin-top: 20px;
-        text-align: center;
-        color: #777;
-        font-size: 0.9em;
-    }
-</style>
+    <footer>
+        <div class="footer-container">
+            <div class="signature">
+                <p><span class="highlight">Yours,</span><br>Karavan</p>
+            </div>
+            <div class="button-container">
+                <button class="back-button" onclick="location.href='index.html'">Back to Main</button>
+            </div>
+        </div>
+        <p class="rights-text">KARAVAN 2025 &copy; No rights reserved.<br>Including yours.</p>
+    </footer>
+</body>
+</html>
