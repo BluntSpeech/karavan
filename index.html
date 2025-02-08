@@ -6,7 +6,7 @@
     <title>KARAVAN</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <style>
-        body {
+        html, body {
             margin: 0;
             padding: 0;
             background: black;
@@ -16,6 +16,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow-x: hidden; /* Убирает горизонтальную прокрутку */
+            max-width: 100vw; /* Ограничивает ширину */
         }
         header {
             background: transparent;
@@ -187,7 +189,7 @@
     <section id="rules">
         <h2 style="color: orange;">KARAVAN RULES</h2>
         <div class="rules-list">
-            <p>No ads ever</p>
+            <p>Ad-free forever</p>  <!-- Новый текст вместо "No ads ever" -->
             <div class="rules-divider"></div>
             <p>Every word is human-made</p>
             <div class="rules-divider"></div>
@@ -212,38 +214,6 @@
             }
         }
         createStars();
-
-        function showEmailForm() {
-            const emailForm = document.getElementById('emailForm');
-            emailForm.style.display = emailForm.style.display === 'block' ? 'none' : 'block';
-        }
-
-        function subscribe() {
-            const emailInput = document.getElementById('email');
-            const email = emailInput.value.trim();
-            
-            if (!validateEmail(email)) {
-                alert("Please enter a valid email address.");
-                return;
-            }
-
-            fetch('https://formspree.io/f/xdkazqbl', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email: email })
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert('Successfully subscribed!');
-                    emailInput.value = "";
-                } else {
-                    throw new Error('Subscription failed.');
-                }
-            })
-            .catch(error => alert('Error: ' + error.message));
-        }
     </script>
 </body>
 </html>
