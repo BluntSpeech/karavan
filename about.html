@@ -19,12 +19,6 @@
             overscroll-behavior: contain; 
         }
         
-        @media screen and (orientation: landscape) {
-            body {
-                transform: rotate(0deg);
-            }
-        }
-
         .content {
             max-width: 600px;
             margin: 0 auto;
@@ -60,77 +54,6 @@
             text-align: center;
         }
 
-        @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-            .content {
-                max-width: 90%;
-            }
-            h1 {
-                font-size: 2em;
-            }
-            p {
-                font-size: 1.1em;
-            }
-            footer {
-                font-size: 0.8em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8em;
-            }
-            p {
-                font-size: 1em;
-            }
-            .content {
-                max-width: 95%;
-            }
-        }
-
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 600px;
-            margin: 40px auto 10px;
-        }
-
-        .signature {
-            text-align: left;
-        }
-
-        .button-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .back-button {
-            background: none;
-            border: 2px solid orange;
-            padding: 8px 12px;
-            font-size: 0.9em;
-            font-weight: bold;
-            color: orange;
-            cursor: pointer;
-            transition: background 0.2s ease, color 0.2s ease;
-            text-transform: uppercase;
-        }
-
-        .back-button:hover {
-            background: orange;
-            color: black;
-        }
-
-        .rights-text {
-            margin-top: 10px;
-            text-align: center;
-            color: #777;
-            font-size: 0.9em;
-        }
-        
         a.orange-link {
             color: orange;
             text-decoration: none;
@@ -139,27 +62,30 @@
 </head>
 <body>
     <div class="content">
-        <h1>ABOUT US</h1>
+        <h1 class="highlight">ABOUT US</h1>
         
-        <p><span class="highlight">Why do fake research papers get published, while independent archives are shut down?</span> Why do I look like my father if I hate him? What is it like to be homeless in New York?</p>
+        <p>Why do fake research papers get published while <span class="highlight">independent archives</span> are shut down?</p>
+        <p>What is it like to be <span class="highlight">homeless</span> in New York?</p>
+        <p>How do gay conversion camps operate in Eastern Europe, and <span class="highlight">could they appear in the U.S.?</span></p>
+        <p>What’s wrong with modern <span class="highlight">protests?</span></p>
 
-        <p><span class="highlight">Karavan is an experimental performance newspaper.</span></p>
+        <p>Karavan is an experimental newspaper.</p>
+        <p>We send new stories straight to your inbox every week.</p>
+        <p>No agendas, no hidden sponsors, no algorithms.</p>
 
-        <p>Every week, we send new stories straight to your inbox. Past stories remain in the archive—ready to be reread, shared, and discussed.</p>
+        <p>Everything we publish stays in the <span class="highlight">archive</span>—ready to be reread, shared, and revisited.</p>
 
-        <p>We, the editors of Karavan, remember the internet before it became a battlefield of algorithms, engagement traps, and curated realities. A time when stories were told, not sold.</p>
+        <p>We remember the internet as it used to be—a place for real stories and open conversation. Now, it’s been twisted, repackaged, and sold back to us as advertising and propaganda.</p>
 
-        <p>Now, in an era of post-truth, mass surveillance, and speech restrictions, we want to bring back what the internet was made for—</p>
+        <p>We want to bring the internet back to what it was made for.</p>
         <p><span class="highlight">People.</span></p>
 
         <h2 class="highlight">IMPORTANT</h2>
-        <p>We stand for independent journalism and support the boldest experiments of our authors, even if not everyone on our editorial board agrees with their views.</p>
+        <p>We stand for independent journalism and embrace bold, unfiltered stories—even when our editorial board disagrees with the views expressed.</p>
 
-        <p>1. <a href="#" class="orange-link">Contact us here.</a> We encourage users to protect their personal data and avoid sharing any sensitive information.</p>
-        <p>2. Each post has a voting feature. We do not track personal data or store information on who viewed what.</p>
-        <p>3. If you feel like it, feel free to submit your own story <a href="#" class="orange-link">here.</a> Be kind. A real person will read your message.</p>
-
-        <p>More on privacy <a href="#" class="orange-link">here</a></p>
+        <p>Posts have a voting feature. We do not track or store your data.</p>
+        <p>Want to share your story? Submit it <a href="#" class="orange-link">here</a>. Be kind. A real person will read your message.</p>
+        <p>Keep personal details private—yours and others'. Any sensitive information in submitted stories will be removed.</p>
     </div>
     <footer>
         <div class="button-container" style="display: flex; justify-content: center; margin-bottom: 60px;">
