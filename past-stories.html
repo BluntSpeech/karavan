@@ -26,11 +26,6 @@
             margin: 0;
             color: orange;
         }
-        h2 {
-            font-size: 1.8em;
-            margin-top: 10px;
-            color: orange;
-        }
         p {
             font-size: 1.2em;
             color: #e0e1dd;
@@ -43,6 +38,28 @@
             overflow: hidden;
             z-index: -1;
         }
+        .article-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 900px;
+        }
+        .article {
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            background: #222;
+            color: white;
+        }
+        .dark-quiz { border-left: 5px solid purple; }
+        .two-camps { border-left: 5px solid red; }
+        .balagan { border-left: 5px solid cyan; }
+        .unpublished { border-left: 5px solid yellow; }
+        .annoyed { border-left: 5px solid orange; }
+        .lupercal { border-left: 5px solid blue; }
+        .performance { border-left: 5px solid green; }
         footer {
             color: #777;
             font-size: 0.9em;
@@ -56,6 +73,36 @@
         <h1>ARCHIVE</h1>
         <p>Everything we published before you joined</p>
     </header>
+    <div class="article-container">
+        <div class="article dark-quiz">
+            <h2>TŌMNAЯ VIKTŌRINA</h2>
+            <p>A series of anonymous questions revealing the darkest secrets of human nature. Answer and see what others think.</p>
+        </div>
+        <div class="article two-camps">
+            <h2>DVA LAGERYA</h2>
+            <p>Two sides, one burning topic. You vote. Who makes the stronger case?</p>
+        </div>
+        <div class="article balagan">
+            <h2>BALAGAN</h2>
+            <p>Gritty stories, raw experiences, and unscripted encounters in the underbelly of the world.</p>
+        </div>
+        <div class="article unpublished">
+            <h2>NEIZDANNOE</h2>
+            <p>Banned, controversial, unspeakable. The opinions and stories others refuse to publish.</p>
+        </div>
+        <div class="article annoyed">
+            <h2>BESIT</h2>
+            <p>Rants, frustrations, irrational pet peeves. This is where the world's irritation vents out.</p>
+        </div>
+        <div class="article lupercal">
+            <h2>LUPERCAL</h2>
+            <p>Once a month, the editorial voice tells a deeper story. A night as a homeless, a broken system exposed.</p>
+        </div>
+        <div class="article performance">
+            <h2>PERFORMANCES</h2>
+            <p>Graffiti, hidden books, QR codes in the wild. Karavan leaves traces in the real world.</p>
+        </div>
+    </div>
     <footer>
         KARAVAN 2025 © No rights reserved. Including yours.
     </footer>
