@@ -6,57 +6,54 @@
     <title>About Us - KARAVAN</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;600&family=Space+Grotesk:wght@400;500&family=DM+Sans:wght@400;600&display=swap');
 
         html, body {
             margin: 0;
-            padding: 10px;
+            padding: 20px;
             background: #F2E6D4;
             color: #002F6C;
             font-family: 'DM Sans', sans-serif;
-            line-height: 2;
+            line-height: 1.8;
             text-align: left;
             max-width: 100vw;
             overflow-x: hidden;
             overscroll-behavior: contain;
-            background-image: url('matte_wall_texture.jpg');
+            background-image: url('plastered_wall_texture.jpg'); /* Добавленный фон */
             background-size: cover;
             background-position: center;
-            background-blend-mode: multiply;
         }
 
         .content {
-            max-width: 400px;
+            max-width: 850px;
             margin: 0 auto;
-            background: rgba(250, 248, 239, 0.97);
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background: rgba(250, 248, 239, 0.95);
+            padding: 45px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
 
         h1, h2 {
             font-family: 'Unbounded', sans-serif;
-            font-weight: 700;
+            font-weight: 600;
             color: #002F6C;
             text-transform: uppercase;
-            letter-spacing: 1.2px;
-            margin-bottom: 15px;
-            text-align: center;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
         }
 
         h1 {
-            font-size: 1.6em;
+            font-size: 2.8em;
         }
 
         h2 {
-            font-size: 1.3em;
+            font-size: 2em;
         }
 
         p {
-            font-size: 1em;
+            font-size: 1.2em;
             color: #002F6C;
-            margin-bottom: 12px;
-            text-align: justify;
+            margin-bottom: 22px;
         }
 
         .highlight {
@@ -66,34 +63,63 @@
 
         footer {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 60px;
             color: #666;
-            font-size: 0.9em;
+            font-size: 1em;
         }
 
         .button-container {
             display: flex;
             justify-content: center;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
         }
 
         .back-button {
             background: none;
-            border: 2px solid #002F6C;
-            padding: 8px 12px;
-            font-size: 0.9em;
+            border: 3px solid #002F6C;
+            padding: 12px 18px;
+            font-size: 1.1em;
             font-weight: bold;
             color: #002F6C;
             cursor: pointer;
             transition: background 0.3s ease, color 0.3s ease;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 5px;
+            letter-spacing: 1.2px;
+            border-radius: 8px;
         }
 
         .back-button:hover {
             background: #002F6C;
             color: #FAF8EF;
+        }
+
+        .gold-link {
+            color: #002F6C;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .gold-link:hover {
+            color: #0056B3;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .content {
+                padding: 30px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 1.6em;
+            }
+            p {
+                font-size: 1.05em;
+            }
         }
     </style>
 </head>
@@ -102,16 +128,25 @@
         <h1>ABOUT US</h1>
         <p><span class="highlight">Hi,</span></p>
         <p>If you're reading this – a real person wrote this for a real person.</p> 
-        <p>Why do <span class="highlight">fake research papers</span> get published while <span class="highlight">independent archives</span> are shut down?</p>
-        <p><span class="highlight">Karavan</span> is an experimental newspaper. We send new stories straight to your inbox every week.</p>
+        <p>Why do fake research papers get published while <span class="highlight">independent archives</span> are shut down? How do gay conversion camps operate in Eastern Europe, and <span class="highlight">could they appear in the US</span>? What’s wrong with modern <span class="highlight">protests</span>?</p>
+
+        <p><span class="highlight">Karavan</span> is an experimental newspaper. We send new stories straight to your inbox every week. No agendas, no hidden sponsors, no algorithms.</p>
+        <p>Everything we publish stays in the <span class="highlight">archive</span>.</p>
+        <p>We remember the internet as it used to be—a place for real stories and open conversation. We want to bring the internet back to what it was made for.</p>
+        <p><span class="highlight">People.</span></p>
+
         <h2>IMPORTANT</h2>
-        <p>We stand for <span class="highlight">independent journalism</span> and bold, unfiltered stories.</p>
+        <p>We stand for independent journalism and embrace bold, unfiltered stories—even when our editorial board disagrees.</p>
+        <p><b>1.</b> Posts have a voting feature. We do not track or store your data.</p>
+        <p><b>2.</b> Want to share your story? Submit it <a href="#" class="gold-link">here</a>. Be kind. A real person will read your message.</p>
+        <p><b>3.</b> Keep personal details private. Any information that could expose your or others’ identity will be hidden.</p>
     </div>
+
     <footer>
         <div class="button-container">
-            <button class="back-button" onclick="location.href='index.html'">Back</button>
+            <button class="back-button" onclick="location.href='index.html'">Back to Main</button>
         </div>
-        <p>KARAVAN 2025 &copy; No rights reserved.</p>
+        <p>KARAVAN 2025 &copy; No rights reserved.<br>Including yours.</p>
     </footer>
 </body>
 </html>
