@@ -10,7 +10,7 @@
 
         html, body {
             margin: 0;
-            padding: 20px;
+            padding: 15px;
             background: #F2E6D4;
             color: #002F6C;
             font-family: 'DM Sans', sans-serif;
@@ -26,12 +26,12 @@
         }
 
         .content {
-            max-width: 850px;
+            max-width: 95%;
             margin: 0 auto;
             background: rgba(250, 248, 239, 0.97);
-            padding: 45px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
         }
 
         h1, h2 {
@@ -39,22 +39,24 @@
             font-weight: 700;
             color: #002F6C;
             text-transform: uppercase;
-            letter-spacing: 1.8px;
-            margin-bottom: 25px;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         h1 {
-            font-size: 2.8em;
-        }
-
-        h2 {
             font-size: 2em;
         }
 
+        h2 {
+            font-size: 1.5em;
+        }
+
         p {
-            font-size: 1.3em;
+            font-size: 1.1em;
             color: #002F6C;
-            margin-bottom: 22px;
+            margin-bottom: 15px;
+            text-align: justify;
         }
 
         .highlight {
@@ -64,29 +66,29 @@
 
         footer {
             text-align: center;
-            margin-top: 60px;
+            margin-top: 40px;
             color: #666;
-            font-size: 1.1em;
+            font-size: 1em;
         }
 
         .button-container {
             display: flex;
             justify-content: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .back-button {
             background: none;
-            border: 3px solid #002F6C;
-            padding: 12px 18px;
-            font-size: 1.1em;
+            border: 2px solid #002F6C;
+            padding: 10px 14px;
+            font-size: 1em;
             font-weight: bold;
             color: #002F6C;
             cursor: pointer;
             transition: background 0.3s ease, color 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border-radius: 8px;
+            border-radius: 6px;
         }
 
         .back-button:hover {
@@ -106,20 +108,17 @@
         }
 
         @media (max-width: 768px) {
-            body {
-                padding: 18px;
-            }
             .content {
-                padding: 30px;
+                padding: 20px;
             }
             h1 {
-                font-size: 2.2em;
+                font-size: 1.8em;
             }
             h2 {
-                font-size: 1.6em;
+                font-size: 1.3em;
             }
             p {
-                font-size: 1.1em;
+                font-size: 1em;
             }
         }
     </style>
