@@ -11,8 +11,8 @@
         html, body {
             margin: 0;
             padding: 20px;
-            background: #121921;
-            color: #F5F5F5;
+            background: #0D1B2A;
+            color: #EAE0D5;
             font-family: 'Space Grotesk', sans-serif;
             line-height: 1.8;
             text-align: left;
@@ -24,7 +24,7 @@
         .content {
             max-width: 750px;
             margin: 0 auto;
-            background: #1A2533;
+            background: #1B263B;
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
@@ -33,28 +33,28 @@
         h1, h2 {
             font-family: 'Unbounded', sans-serif;
             font-weight: 600;
-            color: #E0A80D;
+            color: #E09F3E;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 25px;
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
         }
 
         h2 {
-            font-size: 2em;
+            font-size: 1.8em;
         }
 
         p {
-            font-size: 1.2em;
-            color: #EDEDED;
+            font-size: 1.1em;
+            color: #EAE0D5;
             margin-bottom: 20px;
         }
 
         .highlight {
-            color: #E0A80D;
+            color: #E09F3E;
             font-weight: bold;
             font-style: italic;
         }
@@ -74,11 +74,11 @@
 
         .back-button {
             background: none;
-            border: 2px solid #E0A80D;
+            border: 2px solid #E09F3E;
             padding: 12px 18px;
             font-size: 1em;
             font-weight: bold;
-            color: #E0A80D;
+            color: #E09F3E;
             cursor: pointer;
             transition: background 0.3s ease, color 0.3s ease;
             text-transform: uppercase;
@@ -87,19 +87,37 @@
         }
 
         .back-button:hover {
-            background: #E0A80D;
-            color: #121921;
+            background: #E09F3E;
+            color: #0D1B2A;
         }
 
         .gold-link {
-            color: #E0A80D;
+            color: #E09F3E;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
         }
 
         .gold-link:hover {
-            color: #FFC857;
+            color: #F4A261;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .content {
+                padding: 30px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
