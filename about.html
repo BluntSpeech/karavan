@@ -1,89 +1,182 @@
-<title>About Us - KARAVAN</title>
-<link rel="icon" href="favicon.png" type="image/png">
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>About Us - KARAVAN</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=IBM+Plex+Serif:wght@500&display=swap');
 
-    html, body {
-        margin: 0;
-        padding: 20px;
-        background: #F5F1E3; /* Цвет слоновой кости */
-        color: #2B2B2B;
-        font-family: 'Barlow Condensed', sans-serif;
-        font-weight: 300;
-        line-height: 1.75;
-        text-align: left;
-        max-width: 100vw;
-    }
+        html, body {
+            margin: 0;
+            padding: 20px;
+            background: #1E2A38;
+            color: #EDEDED;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.75;
+            text-align: left;
+            max-width: 100vw;
+            overflow-x: hidden; 
+            overscroll-behavior: contain; 
+        }
+        
+        @media screen and (orientation: landscape) {
+            body {
+                transform: rotate(0deg);
+            }
+        }
 
-    .content {
-        max-width: 700px;
-        margin: 0 auto;
-        background: rgba(255, 255, 255, 0.6); /* Полупрозрачный фон, имитирующий текстуру стены */
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+        .content {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #243447;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
 
-    h1 {
-        font-size: 2.5em;
-        color: #1E3A8A; /* Темно-синий цвет */
-        text-align: left;
-        margin-bottom: 20px;
-        font-weight: 400;
-        letter-spacing: 1px;
-    }
+        h1 {
+            font-size: 2.7em;
+            color: #D4AF37;
+            text-align: left;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
 
-    p {
-        font-size: 1.2em;
-        color: #1E3A8A;
-        margin-bottom: 20px;
-        font-weight: 300;
-    }
+        p {
+            font-size: 1.3em;
+            color: #EDEDED;
+            margin-bottom: 20px;
+            font-family: 'IBM Plex Serif', serif;
+        }
 
-    .highlight {
-        color: #1E3A8A;
-        font-weight: 400;
-        font-style: italic;
-    }
+        .highlight {
+            color: #D4AF37;
+            font-weight: bold;
+            font-style: italic;
+        }
 
-    .back-button {
-        background: none;
-        border: 2px solid #1E3A8A;
-        padding: 8px 12px;
-        font-size: 0.9em;
-        font-weight: 400;
-        color: #1E3A8A;
-        cursor: pointer;
-        transition: background 0.2s ease, color 0.2s ease;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+        .final-block {
+            text-align: left;
+            margin-top: 40px;
+        }
 
-    .back-button:hover {
-        background: #1E3A8A;
-        color: #F5F1E3;
-    }
+        footer {
+            color: #AAA;
+            font-size: 0.9em;
+            margin-top: 40px;
+            text-align: center;
+        }
 
-    .rights-text {
-        margin-top: 10px;
-        text-align: center;
-        color: #666;
-        font-size: 0.9em;
-    }
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .content {
+                max-width: 90%;
+            }
+            h1 {
+                font-size: 2.3em;
+            }
+            p {
+                font-size: 1.2em;
+            }
+            footer {
+                font-size: 0.8em;
+            }
+        }
 
-    a.blue-link {
-        color: #1E3A8A;
-        text-decoration: none;
-        font-weight: 400;
-    }
-</style>
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1.1em;
+            }
+            .content {
+                max-width: 95%;
+            }
+        }
 
-<div class="content">
-    <h1 class="highlight">ABOUT US</h1>
-    <h2 class="highlight">IMPORTANT</h2>
-    <p>We stand for independent journalism and embrace bold, unfiltered stories—even when our editorial board disagrees with the views expressed.</p>
-    <p>1. Posts have a voting feature. We do not track or store your data.</p>
-    <p>2. Want to share your story? Submit it <a href="#" class="blue-link">here</a>. Be kind. A real person will read your message.</p>
-    <p>3. Keep personal details private. Any information that could expose yours or others' identity will be hidden.</p>
-</div>
-<footer class="rights-text">&copy; 2025 KARAVAN. All rights reserved.</footer>
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 700px;
+            margin: 40px auto 10px;
+        }
+
+        .signature {
+            text-align: left;
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .back-button {
+            background: none;
+            border: 2px solid #D4AF37;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #D4AF37;
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .back-button:hover {
+            background: #D4AF37;
+            color: #1E2A38;
+        }
+
+        .rights-text {
+            margin-top: 10px;
+            text-align: center;
+            color: #AAA;
+            font-size: 0.9em;
+        }
+        
+        a.gold-link {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1 class="highlight">ABOUT US</h1>
+        
+         <p><span class="highlight">Hi,</span></p>
+         <p> If you're reading this – a real person wrote this for a real person.<p> 
+        <p> Why do fake research papers get published while <span class="highlight">independent archives</span> are shut down? What is it like to be <span class="highlight">homeless</span> in New York? How do gay conversion camps operate in Eastern Europe, and <span class="highlight">could they appear in the US</span>? What’s wrong with modern <span class="highlight">protests</span>?</p>
+
+        <p><span class="highlight">Karavan</span> is an experimental newspaper. We send new stories straight to your inbox every week. No agendas, no hidden sponsors, no algorithms.</p>
+
+        <p>Everything we publish stays in the <span class="highlight">archive</span>—ready to be reread, shared, and revisited.</p>
+
+        <p>We remember the internet as it used to be—a place for real stories and open conversation. Now, it’s been twisted, repackaged, and sold back to us as advertising and propaganda.</p>
+
+        <p>We want to bring the internet back to what it was made for.</p>
+
+        <p>People.</p>
+        
+     <h2 class="highlight">IMPORTANT</h2>
+        <p>We stand for independent journalism and embrace bold, unfiltered stories—even when our editorial board disagrees with the views expressed.</p>
+        <p>1. Posts have a voting feature. We do not track or store your data.</p>
+        <p>2. Want to share your story? Submit it <a href="#" class="gold-link">here</a>. Be kind. A real person will read your message.</p>
+        <p>3. Keep personal details private. Any information that could expose yours or others identity will be hidden.</p>
+    </div>
+    <footer>
+        <div class="button-container" style="display: flex; justify-content: center; margin-bottom: 60px;">
+            <button class="back-button" onclick="location.href='index.html'">Back to Main</button>
+        </div>
+        <p class="rights-text" style="margin-top: 20px;">KARAVAN 2025 &copy; No rights reserved.<br>Including yours.</p>
+    </footer>
+</body>
+</html>
