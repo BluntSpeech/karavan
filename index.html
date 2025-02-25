@@ -41,7 +41,6 @@
         }
         .box {
             display: flex;
-            flex-direction: row;
             width: 100%;
             max-width: 800px;
             margin: auto;
@@ -61,32 +60,33 @@
             text-align: center;
         }
         .right {
-            flex: 2;
+            flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            padding: 20px;
-            font-size: 16px;
-            text-align: center;
         }
         .bar {
             width: 100%;
-            padding: 10px;
+            padding: 15px;
             color: white;
+            text-align: center;
         }
         .bar1 {
-            background-color: #E76F51;
+            background-color: #C3643F;
         }
         .bar2 {
             background-color: #F4A261;
         }
         .bar3 {
-            background-color: #2A9D8F;
+            background-color: #4E5E2E;
         }
         @media (max-width: 768px) {
             .box {
                 flex-direction: column;
+            }
+            .right {
+                width: 100%;
             }
         }
     </style>
