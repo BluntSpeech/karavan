@@ -12,13 +12,20 @@
             padding: 0;
             background-color: #F8F4E3;
             font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
         .container {
             text-align: center;
-            padding: 40px;
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
         }
         .title {
-            font-size: 190px;
+            font-size: clamp(60px, 12vw, 190px);
             font-weight: bold;
             color: #0D0D0D;
             font-family: 'DM Serif Display', serif;
@@ -34,16 +41,17 @@
         }
         .box {
             display: flex;
-            width: 80%;
+            flex-direction: column;
+            width: 100%;
+            max-width: 800px;
             margin: auto;
-            height: 300px;
+            height: auto;
             margin-top: 20px;
             position: relative;
         }
         .left {
             background-color: #2E4A62;
             flex: 1;
-            margin-right: 5px;
             color: white;
             display: flex;
             align-items: center;
@@ -53,25 +61,25 @@
         }
         .right {
             flex: 2;
-            background-color: #E3C5A8;
+            background-color: #D9A784;
             position: relative;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);
         }
         .bottom-section {
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 50px;
+            height: 70px;
             display: flex;
             flex-direction: column;
         }
         .orange-bar {
-            background-color: #D97742;
-            height: 30px;
+            background-color: #C3643F;
+            height: 40px;
         }
         .green-bar {
-            background-color: #556B2F;
-            height: 20px;
+            background-color: #4E5E2E;
+            height: 30px;
         }
         .text-box {
             position: absolute;
@@ -79,6 +87,11 @@
             bottom: 20px;
             font-size: 14px;
             color: #0D0D0D;
+        }
+        @media (min-width: 768px) {
+            .box {
+                flex-direction: row;
+            }
         }
     </style>
 </head>
