@@ -3,38 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KARAVAN TEST PAGE</title>
+    <title>Design Check</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Oswald:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;700&family=Lora:wght@400;700&display=swap');
         
         body {
-            background-color: #F2E6D4; /* Цвет слоновой кости */
-            background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png'); /* Эффект мятой бумаги */
-            font-family: 'EB Garamond', serif;
-            color: #1A1A2E; /* Темно-синий текст */
+            background-color: #131313; /* Soft black background for better readability */
+            color: #F2E6D4; /* Ivory-colored text for warm contrast */
+            font-family: 'Lora', serif;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             text-align: center;
-            flex-direction: column;
         }
         h1 {
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 4rem;
             font-weight: 300;
             text-transform: uppercase;
+            margin-bottom: 10px;
         }
         h2 {
-            color: #8B0000; /* Кроваво-красный */
+            color: #8B0000; /* Deep red accent */
             font-size: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
         }
         p {
-            font-size: 1.2rem;
-            max-width: 600px;
+            font-size: 18px;
             line-height: 1.6;
+            max-width: 700px;
+            margin: 20px auto;
         }
         .top-menu {
             position: absolute;
@@ -50,6 +53,7 @@
             cursor: pointer;
             font-size: 16px;
             border-radius: 5px;
+            font-family: 'Lora', serif;
         }
         .menu-button:hover {
             background-color: #600000;
@@ -62,9 +66,9 @@
         <button class="menu-button" onclick="location.href='past-stories.html'">Archive</button>
         <button class="menu-button" onclick="location.href='design_check.html'">Design Check</button>
     </div>
-    <h1>MAIN HEADER</h1>
+    <h1>Main Header</h1>
     <h2>Small Header</h2>
-    <p>Давным-давно в далекой стране жили-были старик и старуха. Однажды они нашли таинственный пергамент, который, как говорили, содержал тайну вечного знания. Но лишь тот, кто задаст правильный вопрос, сможет его прочесть…</p>
-    <p>Они отправились в путь, проходя сквозь темные леса и древние города, пока не достигли последней границы мира. Там, среди ветров и шепота древних голосов, они узнали: истина не в ответах, а в поиске.</p>
+    <p>Once upon a time in a distant land, an old man and woman discovered a mysterious parchment. Legend had it that only those who asked the right question could reveal its secrets…</p>
+    <p>They journeyed through dark forests and ancient cities until they reached the world's final frontier. There, among whispering winds and echoes of forgotten voices, they learned that truth is not in answers, but in the search itself.</p>
 </body>
 </html>
