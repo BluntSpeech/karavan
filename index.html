@@ -3,72 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Check</title>
+    <title>Karavan Design</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;700&family=Lora:wght@400;700&display=swap');
-        
+        @font-face {
+            font-family: 'Cako';
+            src: url('https://your-font-source/Cako.woff2') format('woff2'); /* Путь к файлу шрифта */
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
-            background-color: #F2E6D4; /* Ivory background for classic newspaper feel */
-            color: #1A1A2E; /* Dark blue text for high readability */
-            font-family: 'Lora', serif;
+            background-color: #F2E6D4; /* Ivory background */
+            color: #1A1A2E; /* Dark blue text */
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
             text-align: center;
         }
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            font-weight: 300;
+        .karavan-title {
+            font-family: 'Cako', serif;
+            font-size: 6rem;
+            font-weight: bold;
             text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-        h2 {
-            color: #8B0000; /* Blood red accent */
-            font-size: 2rem;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 700px;
-            margin: 20px auto;
-        }
-        .top-menu {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
-        .menu-button {
-            background-color: #8B0000;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            margin: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-            font-family: 'Lora', serif;
-        }
-        .menu-button:hover {
-            background-color: #600000;
+            letter-spacing: 2px;
         }
     </style>
 </head>
 <body>
-    <div class="top-menu">
-        <button class="menu-button" onclick="location.href='about.html'">About Us</button>
-        <button class="menu-button" onclick="location.href='past-stories.html'">Archive</button>
-        <button class="menu-button" onclick="location.href='design_check.html'">Design Check</button>
-    </div>
-    <h1>Main Header</h1>
-    <h2>Small Header</h2>
-    <p>Once upon a time in a distant land, an old man and woman discovered a mysterious parchment. Legend had it that only those who asked the right question could reveal its secrets…</p>
-    <p>They journeyed through dark forests and ancient cities until they reached the world's final frontier. There, among whispering winds and echoes of forgotten voices, they learned that truth is not in answers, but in the search itself.</p>
+    <h1 class="karavan-title">КАРАВАН</h1>
 </body>
 </html>
