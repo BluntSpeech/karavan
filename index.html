@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KARAVAN Typeface</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
         
         body {
             margin: 0;
             padding: 0;
-            background-color: #F0E6D2;
-            font-family: 'DM Serif Display', serif;
+            background-color: #F4F1EB;
+            font-family: 'Inter', sans-serif;
         }
         .container {
             text-align: center;
             padding: 40px;
         }
         .title {
-            font-size: 180px;
+            font-size: 190px;
             font-weight: bold;
-            color: #1F2A44;
+            color: #0D0D0D;
+            font-family: 'DM Serif Display', serif;
         }
         .subtitle {
             font-size: 12px;
@@ -36,7 +37,7 @@
             position: absolute;
             top: 40px;
             right: 40px;
-            color: #1F2A44;
+            color: #0D0D0D;
         }
         .box {
             display: flex;
@@ -44,16 +45,24 @@
             margin: auto;
             height: 300px;
             margin-top: 20px;
+            position: relative;
         }
         .left {
-            background-color: #1F4A72;
+            background-color: #2E4A62;
             flex: 1;
             margin-right: 5px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            font-size: 16px;
         }
         .right {
             flex: 2;
-            background-color: #C7A58C;
+            background-color: #E3C5A8;
             position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
         }
         .bottom-section {
             position: absolute;
@@ -64,11 +73,11 @@
             flex-direction: column;
         }
         .orange-bar {
-            background-color: #CC5A3D;
+            background-color: #D97742;
             height: 30px;
         }
         .green-bar {
-            background-color: #6C7B3B;
+            background-color: #556B2F;
             height: 20px;
         }
         .text-box {
@@ -76,7 +85,7 @@
             right: 10px;
             bottom: 20px;
             font-size: 14px;
-            color: #1F2A44;
+            color: #0D0D0D;
         }
     </style>
 </head>
@@ -86,7 +95,7 @@
     <div class="container">
         <div class="title">KARAVAN</div>
         <div class="box">
-            <div class="left"></div>
+            <div class="left">Typography is an art form that shapes the way we experience written words.</div>
             <div class="right">
                 <div class="bottom-section">
                     <div class="orange-bar"></div>
