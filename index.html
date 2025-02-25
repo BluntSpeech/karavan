@@ -186,13 +186,13 @@
             <p>No hate or discrimination<br>(We're fed up with this irl)</p>
         </div>
     </section>
-    <section class="article-section">
+   <section class="article-section">
     <div class="article">
         <h2>Header 1</h2>
         <div class="article-image">
             <img src="placeholder1.jpg" alt="Article Image">
         </div>
-        <p>Brief description of the first article. A short yet impactful summary.</p>
+        <p>Brief description of the first article.</p>
     </div>
 
     <div class="article">
@@ -200,7 +200,7 @@
         <div class="article-image">
             <img src="placeholder2.jpg" alt="Article Image">
         </div>
-        <p>Brief description of the second article. Capturing the essence of the topic.</p>
+        <p>Brief description of the second article.</p>
     </div>
 
     <div class="article">
@@ -208,7 +208,7 @@
         <div class="article-image">
             <img src="placeholder3.jpg" alt="Article Image">
         </div>
-        <p>Brief description of the third article. Thought-provoking and engaging content.</p>
+        <p>Brief description of the third article.</p>
     </div>
 
     <div class="article">
@@ -216,46 +216,74 @@
         <div class="article-image">
             <img src="placeholder4.jpg" alt="Article Image">
         </div>
-        <p>Brief description of the fourth article. A story that sparks discussion.</p>
+        <p>Brief description of the fourth article.</p>
     </div>
 </section>
 
 <style>
     .article-section {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
         max-width: 100%;
         margin: 20px auto;
         padding: 0 10px;
     }
 
     .article {
-        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
         border: 2px solid orange;
         border-radius: 8px;
         background: rgba(255, 165, 0, 0.1);
+        height: 320px; /* Makes blocks more square/tall */
+        text-align: center;
     }
 
     .article h2 {
-        margin-top: 0;
-        font-size: 1.3em;
+        font-size: 1.1em;
+        margin-bottom: 5px;
     }
 
     .article-image {
-        margin: 15px 0;
+        width: 100%;
+        flex-grow: 1; /* Helps image take available space */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .article-image img {
         width: 100%;
-        height: auto;
-        border-radius: 6px;
+        height: 70%;
         object-fit: cover;
+        border-radius: 6px;
     }
 
     .article p {
-        font-size: 1em;
-        margin: 0;
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+
+    @media (max-width: 600px) {
+        .article-section {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .article {
+            height: 280px; /* Adjust for smaller screens */
+        }
+
+        .article h2 {
+            font-size: 1em;
+        }
+
+        .article p {
+            font-size: 0.8em;
+        }
     }
 </style>
 
