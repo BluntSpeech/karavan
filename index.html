@@ -10,7 +10,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #F8F4E3;
+            background-color: #F5E6C8;
             font-family: 'Inter', sans-serif;
             display: flex;
             flex-direction: column;
@@ -58,35 +58,36 @@
             justify-content: center;
             padding: 20px;
             font-size: 16px;
+            text-align: center;
         }
         .right {
             flex: 2;
             background-color: #D9A784;
             position: relative;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 85%, 0 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: white;
+            font-size: 16px;
+            text-align: center;
         }
         .bottom-section {
-            position: absolute;
-            bottom: 0;
             width: 100%;
-            height: 70px;
+            height: auto;
             display: flex;
             flex-direction: column;
         }
+        .orange-bar, .green-bar {
+            width: 100%;
+            padding: 10px;
+        }
         .orange-bar {
             background-color: #C3643F;
-            height: 40px;
         }
         .green-bar {
             background-color: #4E5E2E;
-            height: 30px;
-        }
-        .text-box {
-            position: absolute;
-            right: 10px;
-            bottom: 20px;
-            font-size: 14px;
-            color: #0D0D0D;
         }
         @media (min-width: 768px) {
             .box {
@@ -100,11 +101,11 @@
     <div class="container">
         <div class="title">KARAVAN</div>
         <div class="box">
-            <div class="left">Typography is an art form that shapes the way we experience written words.</div>
+            <div class="left">KARAVAN is an experimental gazette exploring radical ideas, hidden stories, and artistic freedom beyond the mainstream.</div>
             <div class="right">
                 <div class="bottom-section">
-                    <div class="orange-bar"></div>
-                    <div class="green-bar"></div>
+                    <div class="orange-bar">No AI-generated content, no corporate influence.</div>
+                    <div class="green-bar">Encouraging anonymous and uncensored expression.</div>
                 </div>
             </div>
         </div>
