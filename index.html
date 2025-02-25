@@ -19,12 +19,6 @@
             position: relative;
         }
 
-        @media screen and (orientation: landscape) {
-            body {
-                transform: rotate(0deg);
-            }
-        }
-
         .stars {
             position: fixed;
             width: 100%;
@@ -51,18 +45,15 @@
         .top-menu {
             display: flex;
             justify-content: center;
-            gap: 8px;
-            max-width: 100%;
-            width: 100%;
-            margin: 0 auto 15px;
-            flex-wrap: nowrap;
+            gap: 10px;
+            margin-bottom: 20px;
         }
 
         .menu-button {
             background: none;
             border: 2px solid orange;
-            padding: 6px 8px;
-            font-size: 0.85em;
+            padding: 8px 12px;
+            font-size: 0.9em;
             font-weight: bold;
             color: orange;
             cursor: pointer;
@@ -75,26 +66,18 @@
             color: black;
         }
 
-        h1, .experimental {
-            color: orange;
-            font-weight: bold;
-        }
-
         h1 {
+            color: orange;
             font-size: 2.2em;
-            margin: 0;
+            margin-bottom: 10px;
         }
 
         h2 {
-            margin-top: 10px;
-            font-size: clamp(1em, 4vw, 1.2em);
-            font-weight: normal;
+            font-size: 1.2em;
             color: #e0e1dd;
-            white-space: nowrap;
         }
 
         .subscribe-container {
-            text-align: center;
             margin-top: 40px;
         }
 
@@ -109,51 +92,42 @@
             font-size: 1em;
             transition: background 0.15s ease, transform 0.1s ease;
             box-shadow: 0 4px 12px rgba(255, 187, 51, 0.4);
-            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
         }
 
         .subscribe-button:active {
             background: #CC7700;
             transform: scale(0.96);
-            box-shadow: 0 2px 8px rgba(204, 119, 0, 0.6);
         }
 
         #emailForm {
             display: none;
-            text-align: center;
-            margin-top: 10px;
-            opacity: 1;
-            transition: opacity 0.5s ease-out;
+            margin-top: 15px;
         }
 
         input[type="email"] {
-            padding: 14px;
-            width: 90%;
-            max-width: 400px;
+            padding: 12px;
+            width: 80%;
+            max-width: 350px;
             border: 1px solid #444;
-            border-radius: 8px;
+            border-radius: 6px;
             background: #1b263b;
             color: #e0e1dd;
             text-align: center;
-            font-size: 1.1em;
-            margin-bottom: 10px;
+            font-size: 1em;
         }
 
         #rules {
-            text-align: center;
             margin-top: 40px;
         }
 
         .rules-list p {
-            margin: 10px 0;
-            font-size: 1em;
+            margin: 8px 0;
         }
 
         footer {
             color: #777;
             font-size: 0.9em;
             margin-top: 40px;
-            text-align: center;
         }
     </style>
 </head>
@@ -166,8 +140,7 @@
             <button class="menu-button" onclick="location.href='past-stories.html'">Archive</button>
         </div>
         <h1>KARAVAN</h1>
-        <p class="experimental">EXPERIMENTAL GAZETTE SECURED BY MULTI-LAYER ENCRYPTION</p>
-       <h2>World is changing<br>Keep talking about what matters</h2>
+        <h2>World is changing<br>Keep talking about what matters</h2>
     </header>
 
     <section class="subscribe-container">
@@ -183,7 +156,7 @@
         <div class="rules-list">
             <p>Ad-free forever</p>
             <p>Every word is human-made</p>
-            <p>No hate or discrimination<br>(We're fed up with this irl)</p>
+            <p>No hate or discrimination<br>(We're fed up with this IRL)</p>
         </div>
     </section>
 
@@ -194,6 +167,7 @@
     <script>
         function createStars() {
             const starContainer = document.getElementById('starContainer');
+            starContainer.innerHTML = ""; // Clear old stars if reloaded
             for (let i = 0; i < 100; i++) {
                 const star = document.createElement('div');
                 star.classList.add('star');
@@ -206,13 +180,13 @@
         createStars();
 
         function showEmailForm() {
-            document.getElementById('emailForm').style.display = 'block';
+            const form = document.getElementById('emailForm');
+            form.style.display = form.style.display === 'block' ? 'none' : 'block';
         }
 
         function subscribe() {
             const emailInput = document.getElementById('email');
             const email = emailInput.value.trim();
-            const emailForm = document.getElementById('emailForm');
             
             if (!validateEmail(email)) {
                 alert("Please enter a valid email address.");
@@ -221,23 +195,14 @@
 
             fetch('https://formspree.io/f/xdkazqbl', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email: email })
             })
             .then(response => {
                 if (response.ok) {
                     alert('Success! Welcome to Karavan');
-
-                    // Плавное сворачивание формы
-                    emailForm.style.opacity = "0";
-                    setTimeout(() => {
-                        emailForm.style.display = 'none';
-                        emailForm.style.opacity = "1";
-                    }, 500);
-
                     emailInput.value = "";
+                    document.getElementById('emailForm').style.display = 'none';
                 } else {
                     throw new Error('Subscription failed.');
                 }
@@ -249,91 +214,6 @@
             const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return re.test(email);
         }
-        <section class="article-section">
-    <div class="article">
-        <h2>Header 1</h2>
-        <div class="article-images">
-            <img src="placeholder1.jpg" alt="Article Image 1">
-            <img src="placeholder2.jpg" alt="Article Image 2">
-            <img src="placeholder3.jpg" alt="Article Image 3">
-            <img src="placeholder4.jpg" alt="Article Image 4">
-        </div>
-        <p>Brief description of the first article. A short yet impactful summary that hooks the reader.</p>
-    </div>
-
-    <div class="article">
-        <h2>Header 2</h2>
-        <div class="article-images">
-            <img src="placeholder5.jpg" alt="Article Image 1">
-            <img src="placeholder6.jpg" alt="Article Image 2">
-            <img src="placeholder7.jpg" alt="Article Image 3">
-            <img src="placeholder8.jpg" alt="Article Image 4">
-        </div>
-        <p>Brief description of the second article. Capturing the essence of the topic in just a few lines.</p>
-    </div>
-
-    <div class="article">
-        <h2>Header 3</h2>
-        <div class="article-images">
-            <img src="placeholder9.jpg" alt="Article Image 1">
-            <img src="placeholder10.jpg" alt="Article Image 2">
-            <img src="placeholder11.jpg" alt="Article Image 3">
-            <img src="placeholder12.jpg" alt="Article Image 4">
-        </div>
-        <p>Brief description of the third article. Thought-provoking content that challenges perspectives.</p>
-    </div>
-
-    <div class="article">
-        <h2>Header 4</h2>
-        <div class="article-images">
-            <img src="placeholder13.jpg" alt="Article Image 1">
-            <img src="placeholder14.jpg" alt="Article Image 2">
-            <img src="placeholder15.jpg" alt="Article Image 3">
-            <img src="placeholder16.jpg" alt="Article Image 4">
-        </div>
-        <p>Brief description of the fourth article. A story that sparks discussion and curiosity.</p>
-    </div>
-</section>
-
-<style>
-    .article-section {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 40px;
-        max-width: 90%;
-        margin: 50px auto;
-        text-align: center;
-    }
-
-    .article {
-        padding: 20px;
-        border: 2px solid orange;
-        border-radius: 8px;
-        background: rgba(255, 165, 0, 0.1);
-    }
-
-    .article-images {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin: 15px 0;
-    }
-
-    .article-images img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 6px;
-        border: 2px solid #e0e1dd;
-    }
-
-    @media (min-width: 768px) {
-        .article-section {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-</style>
     </script>
 </body>
 </html>
