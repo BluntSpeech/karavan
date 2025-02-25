@@ -3,104 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KARDANO Design</title>
+    <title>Cako Typeface</title>
     <style>
-        @font-face {
-            font-family: 'Cako';
-            src: url('https://your-font-source/Cako.woff2') format('woff2'); /* Путь к файлу шрифта */
-            font-weight: normal;
-            font-style: normal;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+        
         body {
-            background-color: #F2E6D4; /* Ivory background */
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+            background-color: #E6E2D5;
+            font-family: 'DM Serif Display', serif;
         }
-        .karavan-title {
-            font-family: 'Cako', serif;
-            font-size: 6rem;
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+        .title {
+            font-size: 140px;
             font-weight: bold;
+        }
+        .subtitle {
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: black;
-            z-index: 2;
-        }
-        .abstract-shapes {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
-        .rectangle {
-            position: absolute;
-        }
-        .rect-1 { background-color: #4A6FA5; width: 400px; height: 300px; top: 15%; left: 10%; }
-        .rect-2 { background-color: #D85C41; width: 350px; height: 250px; bottom: 10%; right: 15%; }
-        .rect-3 { background-color: #AA7A84; width: 250px; height: 250px; bottom: 40%; left: 30%; }
-        .rect-4 { background-color: #E9C46A; width: 500px; height: 200px; top: 50%; right: 5%; }
-        .ball {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background-color: #8B0000;
-            border-radius: 50%;
-            top: 40%;
-            right: 10%;
-            animation: rollDown 3s ease-in-out forwards;
-        }
-        @keyframes rollDown {
-            0% { transform: translateY(0) translateX(0); }
-            50% { transform: translateY(100px) translateX(-50px); }
-            100% { transform: translateY(200px) translateX(-100px); }
-        }
-        .about-section {
-            position: absolute;
-            bottom: -200px;
+            top: 30px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 1s ease-in-out, bottom 1s ease-in-out;
         }
-        .show-about {
-            opacity: 1;
-            bottom: 50px;
+        .variants {
+            font-size: 12px;
+            position: absolute;
+            top: 40px;
+            right: 40px;
+        }
+        .box {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            height: 300px;
+            margin-top: 20px;
+        }
+        .left {
+            background-color: #1F4A72;
+            flex: 1;
+            margin-right: 5px;
+        }
+        .right {
+            flex: 2;
+            background-color: #DAB5A1;
+            position: relative;
+        }
+        .circle {
+            width: 120px;
+            height: 120px;
+            background-color: #B97D91;
+            border-radius: 50%;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+        .bottom-section {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+        .orange-bar {
+            background-color: #D05132;
+            height: 30px;
+        }
+        .green-bar {
+            background-color: #5A6B2F;
+            height: 20px;
+        }
+        .text-box {
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <div class="abstract-shapes">
-        <div class="rectangle rect-1"></div>
-        <div class="rectangle rect-2"></div>
-        <div class="rectangle rect-3"></div>
-        <div class="rectangle rect-4"></div>
-        <div class="ball" id="ball"></div>
+    <div class="subtitle">VJ-Type Foundry</div>
+    <div class="variants">Black &nbsp;&nbsp; Regular &nbsp;&nbsp; Thin</div>
+    <div class="container">
+        <div class="title">Cako</div>
+        <div class="box">
+            <div class="left"></div>
+            <div class="right">
+                <div class="circle"></div>
+                <div class="bottom-section">
+                    <div class="orange-bar"></div>
+                    <div class="green-bar"></div>
+                </div>
+                <div class="text-box">CAKO TYPEFACE & Italics</div>
+            </div>
+        </div>
     </div>
-    <h1 class="karavan-title">KARDANO</h1>
-    <div class="about-section" id="about">
-        <h2>About Us</h2>
-        <p>We are creators of unique and innovative design concepts, blending modern aesthetics with storytelling.</p>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(() => {
-                document.getElementById("about").classList.add("show-about");
-            }, 3000);
-        });
-    </script>
 </body>
 </html>
