@@ -41,7 +41,7 @@
         }
         .box {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             width: 100%;
             max-width: 800px;
             margin: auto;
@@ -62,36 +62,31 @@
         }
         .right {
             flex: 2;
-            background-color: #D9A784;
-            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 20px;
-            color: white;
             font-size: 16px;
             text-align: center;
         }
-        .bottom-section {
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-        }
-        .orange-bar, .green-bar {
+        .bar {
             width: 100%;
             padding: 10px;
+            color: white;
         }
-        .orange-bar {
-            background-color: #C3643F;
+        .bar1 {
+            background-color: #E76F51;
         }
-        .green-bar {
-            background-color: #4E5E2E;
+        .bar2 {
+            background-color: #F4A261;
         }
-        @media (min-width: 768px) {
+        .bar3 {
+            background-color: #2A9D8F;
+        }
+        @media (max-width: 768px) {
             .box {
-                flex-direction: row;
+                flex-direction: column;
             }
         }
     </style>
@@ -103,10 +98,9 @@
         <div class="box">
             <div class="left">KARAVAN is an experimental gazette exploring radical ideas, hidden stories, and artistic freedom beyond the mainstream.</div>
             <div class="right">
-                <div class="bottom-section">
-                    <div class="orange-bar">No AI-generated content, no corporate influence.</div>
-                    <div class="green-bar">Encouraging anonymous and uncensored expression.</div>
-                </div>
+                <div class="bar bar1">No AI-generated content, no corporate influence.</div>
+                <div class="bar bar2">Encouraging anonymous and uncensored expression.</div>
+                <div class="bar bar3">Journalism beyond traditional constraints.</div>
             </div>
         </div>
     </div>
