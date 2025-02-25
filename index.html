@@ -48,6 +48,38 @@
         .rect-2 { background-color: #D85C41; width: 350px; height: 250px; bottom: 10%; right: 15%; }
         .rect-3 { background-color: #AA7A84; width: 250px; height: 250px; bottom: 40%; left: 30%; }
         .rect-4 { background-color: #E9C46A; width: 500px; height: 200px; top: 50%; right: 5%; }
+        .ball {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #8B0000;
+            border-radius: 50%;
+            top: 40%;
+            right: 10%;
+            animation: rollDown 3s ease-in-out forwards;
+        }
+        @keyframes rollDown {
+            0% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(100px) translateX(-50px); }
+            100% { transform: translateY(200px) translateX(-100px); }
+        }
+        .about-section {
+            position: absolute;
+            bottom: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out, bottom 1s ease-in-out;
+        }
+        .show-about {
+            opacity: 1;
+            bottom: 50px;
+        }
     </style>
 </head>
 <body>
@@ -56,7 +88,19 @@
         <div class="rectangle rect-2"></div>
         <div class="rectangle rect-3"></div>
         <div class="rectangle rect-4"></div>
+        <div class="ball" id="ball"></div>
     </div>
     <h1 class="karavan-title">KARDANO</h1>
+    <div class="about-section" id="about">
+        <h2>About Us</h2>
+        <p>We are creators of unique and innovative design concepts, blending modern aesthetics with storytelling.</p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                document.getElementById("about").classList.add("show-about");
+            }, 3000);
+        });
+    </script>
 </body>
 </html>
