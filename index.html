@@ -27,18 +27,14 @@
             width: 100%;
             overflow-x: hidden;
         }
-        .nav {
+        .subtitle {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             position: absolute;
-            top: 10px;
+            top: 30px;
             left: 50%;
             transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            flex-wrap: wrap;
-            text-align: center;
         }
         .container {
             text-align: center;
@@ -47,7 +43,7 @@
             max-width: 600px;
         }
         .title {
-            font-size: clamp(40px, 10vw, 120px);
+            font-size: clamp(60px, 12vw, 190px);
             font-weight: bold;
             color: #0D0D0D;
             font-family: 'CAKO', sans-serif;
@@ -90,11 +86,11 @@
         }
         .bar {
             width: 100%;
-            padding: 20px; /* Adjusted padding for mobile */
+            padding: 20px;
             color: white;
             text-align: center;
             flex: 1;
-            font-size: 18px; /* Adjusted font size for better fit */
+            font-size: 18px;
             font-family: 'CAKO', sans-serif;
             font-weight: bold;
             word-wrap: break-word;
@@ -103,10 +99,8 @@
         .bar2 { background-color: #F4A261; }
         .bar3 { background-color: #4E5E2E; }
         @media (max-width: 600px) {
-            .nav {
-                flex-direction: column;
-                text-align: center;
-                font-size: 8px;
+            .subtitle {
+                font-size: 10px;
             }
             .bar {
                 font-size: 16px;
@@ -119,11 +113,7 @@
     </style>
 </head>
 <body>
-    <div class="nav">
-        <span>About Us</span>
-        <span>Archive</span>
-        <span>Support</span>
-    </div>
+    <div class="subtitle">VJ-Type Foundry</div>
     <div class="container">
         <div class="title">KARAVAN</div>
         <div class="box">
