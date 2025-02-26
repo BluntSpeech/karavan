@@ -18,92 +18,28 @@
             justify-content: center;
             min-height: 100vh;
         }
-        .nav {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 20px;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .container {
-            text-align: center;
-            padding: 20px;
-            width: 90%;
-            max-width: 800px;
-        }
-        .title {
-            font-size: clamp(60px, 12vw, 190px);
-            font-weight: bold;
-            color: #0D0D0D;
-            font-family: 'DM Serif Display', serif;
-            text-align: center;
-        }
-        .box {
-            display: flex;
+        .subscribe-container {
             width: 100%;
-            height: auto;
-            margin-top: 20px;
-            position: relative;
-        }
-        .left {
-            background-color: #2E4A62;
-            flex: 1;
-            color: white;
+            max-width: 400px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 20px;
-            font-size: 16px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 24px;
-        }
-        .italic {
-            font-style: italic;
-            font-size: 18px;
-            font-weight: normal;
-        }
-        .right {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .bar {
-            width: 100%;
-            padding: 20px;
-            color: white;
-            text-align: center;
-            flex: 1;
-        }
-        .bar1 { background-color: #C3643F; }
-        .bar2 { background-color: #F4A261; }
-        .bar3 { background-color: #4E5E2E; }
-        .subscribe-container {
-            width: 100%;
-            max-width: 800px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
+            position: relative;
         }
         .subscribe-button {
             background-color: #E07A5F;
             color: white;
             border: none;
-            padding: 25px 0;
+            padding: 20px 0;
             font-size: 22px;
             cursor: pointer;
             border-radius: 10px;
             width: 100%;
             text-align: center;
             transition: 0.3s ease;
-            box-shadow: 0 0 10px rgba(224, 122, 95, 0.6);
             position: relative;
+            box-shadow: 0 0 10px rgba(224, 122, 95, 0.6);
         }
         .subscribe-button:hover {
             box-shadow: 0 0 20px rgba(224, 122, 95, 0.9);
@@ -114,9 +50,11 @@
             50% { box-shadow: 0 0 20px rgba(224, 122, 95, 1); }
             100% { box-shadow: 0 0 10px rgba(224, 122, 95, 0.6); }
         }
-        .subscribe-button::after {
+        .subscribe-button::before {
             content: '';
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             border-radius: 10px;
@@ -124,20 +62,19 @@
         }
         #emailForm {
             display: none;
-            margin-top: 10px;
+            flex-direction: column;
             width: 100%;
-            display: flex;
-            justify-content: space-between;
+            margin-top: 15px;
         }
         input[type="email"] {
-            flex: 3;
             padding: 15px;
             font-size: 18px;
             border: 1px solid #ccc;
             border-radius: 10px;
+            width: calc(100% - 20px);
+            margin-bottom: 10px;
         }
         .send-button {
-            flex: 1;
             background-color: #F4A261;
             color: white;
             border: none;
@@ -154,24 +91,6 @@
     </style>
 </head>
 <body>
-    <div class="nav">
-        <span>About Us</span>
-        <span>Archive</span>
-    </div>
-    <div class="container">
-        <div class="title">KARAVAN</div>
-        <div class="box">
-            <div class="left">
-                EXPERIMENTAL GAZETTE SECURED BY MULTI-LAYER ENCRYPTION
-                <div class="italic">Uncensored voices shape the future</div>
-            </div>
-            <div class="right">
-                <div class="bar bar1">Ad-free forever</div>
-                <div class="bar bar2">Every word is human-made</div>
-                <div class="bar bar3">No hate or discrimination<br>(We're fed up with this irl)</div>
-            </div>
-        </div>
-    </div>
     <section class="subscribe-container">
         <button class="subscribe-button" onclick="showEmailForm()">SUBSCRIBE</button>
         <div id="emailForm">
