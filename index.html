@@ -3,54 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KARAVAN</title>
+    <title>KARAVAN Typeface</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #F5E6C8;
+            font-family: 'Inter', sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
         }
         .container {
-            display: flex;
-            width: 80%;
-            max-width: 1000px;
-            background: white;
+            text-align: center;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 1200px;
         }
-        .left-panel {
+        .title {
+            font-size: clamp(60px, 12vw, 190px);
+            font-weight: bold;
+            color: #0D0D0D;
+            font-family: 'DM Serif Display', serif;
+        }
+        .subtitle {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .box {
+            display: flex;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            height: auto;
+            margin-top: 20px;
+            position: relative;
+        }
+        .left {
+            background-color: #2E4A62;
             flex: 1;
-            background: #007BFF;
             color: white;
-            padding: 20px;
-            border-radius: 10px 0 0 10px;
-        }
-        .right-panel {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .rule {
-            flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
-            font-weight: bold;
+            padding: 20px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bar {
+            width: 100%;
+            padding: 15px;
             color: white;
             text-align: center;
-            padding: 20px;
         }
-        .rule:nth-child(1) { background: #FF5733; }
-        .rule:nth-child(2) { background: #33C3FF; }
-        .rule:nth-child(3) { background: #28A745; }
+        .bar1 {
+            background-color: #C3643F;
+        }
+        .bar2 {
+            background-color: #F4A261;
+        }
+        .bar3 {
+            background-color: #4E5E2E;
+        }
+        @media (max-width: 768px) {
+            .box {
+                flex-direction: column;
+            }
+            .right {
+                width: 100%;
+            }
+        }
         .subscribe-container {
             width: 100%;
             display: flex;
@@ -81,15 +119,19 @@
     </style>
 </head>
 <body>
+    <div class="subtitle">VJ-Type Foundry</div>
     <div class="container">
-        <div class="left-panel">
-            <p>EXPERIMENTAL GAZETTE SECURED BY MULTI-LAYER ENCRYPTION</p>
-            <h2>World is changing<br>Keep talking about what matters</h2>
-        </div>
-        <div class="right-panel">
-            <div class="rule">Ad-free forever</div>
-            <div class="rule">Every word is human-made</div>
-            <div class="rule">No hate or discrimination<br>(We're fed up with this irl)</div>
+        <div class="title">KARAVAN</div>
+        <div class="box">
+            <div class="left">
+                <p>EXPERIMENTAL GAZETTE SECURED BY MULTI-LAYER ENCRYPTION</p>
+                <h2>World is changing<br>Keep talking about what matters</h2>
+            </div>
+            <div class="right">
+                <div class="bar bar1">Ad-free forever</div>
+                <div class="bar bar2">Every word is human-made</div>
+                <div class="bar bar3">No hate or discrimination<br>(We're fed up with this irl)</div>
+            </div>
         </div>
     </div>
     <section class="subscribe-container">
