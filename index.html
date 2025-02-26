@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>KARAVAN Typeface</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=DM+Serif+Display&display=swap');
         
         @font-face {
             font-family: 'CAKO';
@@ -46,13 +46,13 @@
             font-size: clamp(60px, 12vw, 190px);
             font-weight: bold;
             color: #0D0D0D;
-            font-family: 'CAKO', sans-serif;
+            font-family: 'DM Serif Display', serif;
             text-align: center;
             word-wrap: break-word;
         }
         .box {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             width: 100%;
             height: auto;
             margin-top: 10px;
@@ -83,6 +83,8 @@
             flex: 1;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .bar {
             width: 100%;
@@ -101,6 +103,12 @@
         @media (max-width: 600px) {
             .subtitle {
                 font-size: 10px;
+            }
+            .box {
+                flex-direction: column;
+            }
+            .right {
+                width: 100%;
             }
             .bar {
                 font-size: 16px;
