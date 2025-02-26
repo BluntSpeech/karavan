@@ -2,17 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KARAVAN Typeface</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=DM+Serif+Display&display=swap');
-        
-        @font-face {
-            font-family: 'CAKO';
-            src: url('/mnt/data/CAKO.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
         
         body {
             margin: 0;
@@ -24,154 +17,90 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            width: 100%;
-            overflow-x: hidden;
-        }
-        .nav {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 15px;
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            flex-wrap: wrap;
-            text-align: center;
         }
         .container {
             text-align: center;
-            padding: 5px;
+            padding: 20px;
             width: 90%;
-            max-width: 600px;
+            max-width: 1200px;
         }
         .title {
-            font-size: clamp(40px, 8vw, 120px);
+            font-size: clamp(60px, 12vw, 190px);
             font-weight: bold;
             color: #0D0D0D;
             font-family: 'DM Serif Display', serif;
-            text-align: center;
-            word-wrap: break-word;
+        }
+        .subtitle {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         .box {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            grid-template-rows: auto auto;
-            gap: 10px;
+            display: flex;
             width: 100%;
             max-width: 800px;
-            margin: 20px auto;
+            margin: auto;
+            height: auto;
+            margin-top: 20px;
+            position: relative;
         }
         .left {
             background-color: #2E4A62;
+            flex: 1;
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
-            font-size: 18px;
+            font-size: 16px;
             text-align: center;
-            font-weight: normal;
-            line-height: 1.4;
-            letter-spacing: 0.5px;
-            grid-column: 1 / 2;
-            grid-row: 1 / 3;
         }
         .right {
+            flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            grid-column: 2 / 3;
         }
         .bar {
             width: 100%;
             padding: 15px;
             color: white;
             text-align: center;
-            font-size: 18px;
-            font-family: 'CAKO', sans-serif;
-            font-weight: bold;
         }
-        .bar1 { background-color: #C3643F; }
-        .bar2 { background-color: #F4A261; }
+        .bar1 {
+            background-color: #C3643F;
+        }
+        .bar2 {
+            background-color: #F4A261;
+        }
         .bar3 {
             background-color: #4E5E2E;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
         }
-        .subscribe-button {
-            background-color: #E07A5F;
-            color: white;
-            font-family: 'CAKO', sans-serif;
-            font-size: 18px;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 0;
-            cursor: pointer;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            width: 100%;
-            text-align: center;
-            position: relative;
-            margin-top: -10px;
-        }
-        .subscribe-button:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
-        }
-        @media (max-width: 600px) {
-            .nav {
-                font-size: 8px;
-                gap: 10px;
-            }
+        @media (max-width: 768px) {
             .box {
-                display: flex;
                 flex-direction: column;
-                align-items: center;
-                max-width: 100%;
-                padding: 0 10px;
             }
             .right {
                 width: 100%;
-            }
-            .bar {
-                font-size: 14px;
-                padding: 12px;
-            }
-            .title {
-                font-size: clamp(30px, 8vw, 100px);
-            }
-            .left {
-                padding: 12px;
-                font-size: 16px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="nav">
-        <span>ARCHIVE</span>
-        <span>ABOUT US</span>
-        <span>SUPPORT</span>
-    </div>
+    <div class="subtitle">VJ-Type Foundry</div>
     <div class="container">
         <div class="title">KARAVAN</div>
         <div class="box">
-            <div class="left">
-                <span class="description"><b>Karavan — an independent experimental gazette.</b> Created for free expression of opinions, protected by multi-layer encryption, and funded exclusively by its readers.</span>
-            </div>
+            <div class="left">KARAVAN is an experimental gazette exploring radical ideas, hidden stories, and artistic freedom beyond the mainstream.</div>
             <div class="right">
-                <div class="bar bar1">Ad-free forever</div>
-                <div class="bar bar2">Every word is human-made</div>
-                <div class="bar bar3">No hate or discrimination<br>(We're fed up with this irl)</div>
-                <button class="subscribe-button">SUBSCRIBE</button>
+                <div class="bar bar1">No AI-generated content, no corporate influence.</div>
+                <div class="bar bar2">Encouraging anonymous and uncensored expression.</div>
+                <div class="bar bar3">Journalism beyond traditional constraints.</div>
             </div>
         </div>
     </div>
