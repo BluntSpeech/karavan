@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>KARAVAN Typeface</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        
+        @font-face {
+            font-family: 'CAKO';
+            src: url('/mnt/data/CAKO.woff2') format('woff2'); /* Ensure correct path */
+            font-weight: normal;
+            font-style: normal;
+        }
         
         body {
             margin: 0;
@@ -17,36 +24,42 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            width: 100%;
+            overflow-x: hidden;
         }
         .nav {
             position: absolute;
-            top: 20px;
+            top: 10px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 20px;
-            font-size: 12px;
+            gap: 10px;
+            font-size: 10px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+            flex-wrap: wrap;
+            text-align: center;
         }
         .container {
             text-align: center;
-            padding: 20px;
-            width: 90%;
-            max-width: 800px;
+            padding: 10px;
+            width: 95%;
+            max-width: 600px;
         }
         .title {
-            font-size: clamp(60px, 12vw, 190px);
+            font-size: clamp(40px, 10vw, 120px);
             font-weight: bold;
             color: #0D0D0D;
             font-family: 'CAKO', sans-serif;
             text-align: center;
+            word-wrap: break-word;
         }
         .box {
             display: flex;
+            flex-direction: column;
             width: 100%;
             height: auto;
-            margin-top: 20px;
+            margin-top: 10px;
             position: relative;
         }
         .left {
@@ -57,18 +70,18 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 30px;
-            font-size: 22px;
+            padding: 15px;
+            font-size: 18px;
             text-align: center;
             font-weight: normal;
-            line-height: 1.6;
+            line-height: 1.4;
             letter-spacing: 0.5px;
         }
         .description {
             font-family: 'Inter', sans-serif;
-            font-size: 22px;
+            font-size: 18px;
             font-weight: normal;
-            line-height: 1.5;
+            line-height: 1.4;
         }
         .right {
             flex: 1;
@@ -77,17 +90,32 @@
         }
         .bar {
             width: 100%;
-            padding: 40px; /* Increased padding to make text larger */
+            padding: 20px; /* Adjusted padding for mobile */
             color: white;
             text-align: center;
             flex: 1;
-            font-size: 22px; /* Matching the size of text in blue block */
+            font-size: 18px; /* Adjusted font size for better fit */
             font-family: 'CAKO', sans-serif;
             font-weight: bold;
+            word-wrap: break-word;
         }
         .bar1 { background-color: #C3643F; }
         .bar2 { background-color: #F4A261; }
         .bar3 { background-color: #4E5E2E; }
+        @media (max-width: 600px) {
+            .nav {
+                flex-direction: column;
+                text-align: center;
+                font-size: 8px;
+            }
+            .bar {
+                font-size: 16px;
+                padding: 15px;
+            }
+            .title {
+                font-size: clamp(30px, 8vw, 100px);
+            }
+        }
     </style>
 </head>
 <body>
