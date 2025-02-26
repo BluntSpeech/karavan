@@ -18,6 +18,17 @@
             justify-content: center;
             min-height: 100vh;
         }
+        .nav {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
         .container {
             text-align: center;
             padding: 20px;
@@ -29,15 +40,6 @@
             font-weight: bold;
             color: #0D0D0D;
             font-family: 'DM Serif Display', serif;
-        }
-        .subtitle {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: absolute;
-            top: 30px;
-            left: 50%;
-            transform: translateX(-50%);
         }
         .box {
             display: flex;
@@ -53,42 +55,35 @@
             flex: 1;
             color: white;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 20px;
             font-size: 16px;
             text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .italic {
+            font-style: italic;
+            font-size: 18px;
+            font-weight: normal;
         }
         .right {
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
         }
         .bar {
             width: 100%;
-            padding: 15px;
+            padding: 20px;
             color: white;
             text-align: center;
+            flex: 1;
         }
-        .bar1 {
-            background-color: #C3643F;
-        }
-        .bar2 {
-            background-color: #F4A261;
-        }
-        .bar3 {
-            background-color: #4E5E2E;
-        }
-        @media (max-width: 768px) {
-            .box {
-                flex-direction: column;
-            }
-            .right {
-                width: 100%;
-            }
-        }
+        .bar1 { background-color: #C3643F; }
+        .bar2 { background-color: #F4A261; }
+        .bar3 { background-color: #4E5E2E; }
         .subscribe-container {
             width: 100%;
             display: flex;
@@ -100,32 +95,53 @@
             background-color: #FF5733;
             color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 18px;
+            padding: 20px 0;
+            font-size: 22px;
             cursor: pointer;
             border-radius: 5px;
-            margin-top: 10px;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
         }
         #emailForm {
             display: none;
             margin-top: 10px;
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
         }
         input[type="email"] {
-            padding: 10px;
-            font-size: 16px;
+            flex: 3;
+            padding: 15px;
+            font-size: 18px;
             border: 1px solid #ccc;
             border-radius: 5px;
+        }
+        .send-button {
+            flex: 1;
+            background-color: #FF5733;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="subtitle">VJ-Type Foundry</div>
+    <div class="nav">
+        <span>About Us</span>
+        <span>Archive</span>
+    </div>
     <div class="container">
         <div class="title">KARAVAN</div>
         <div class="box">
             <div class="left">
-                <p>EXPERIMENTAL GAZETTE SECURED BY MULTI-LAYER ENCRYPTION</p>
-                <h2>World is changing<br>Keep talking about what matters</h2>
+                EXPERIMENTAL GAZETTE SECURED BY MULTI-LAYER ENCRYPTION
+                <div class="italic">Uncensored voices shape the future</div>
             </div>
             <div class="right">
                 <div class="bar bar1">Ad-free forever</div>
@@ -135,15 +151,15 @@
         </div>
     </div>
     <section class="subscribe-container">
-        <button class="subscribe-button" onclick="showEmailForm()">AGREE</button>
+        <button class="subscribe-button" onclick="showEmailForm()">SUBSCRIBE</button>
         <div id="emailForm">
             <input type="email" id="email" placeholder="Enter your email">
-            <button class="subscribe-button" onclick="subscribe()">CONFIRM</button>
+            <button class="send-button" onclick="subscribe()">SEND</button>
         </div>
     </section>
     <script>
         function showEmailForm() {
-            document.getElementById("emailForm").style.display = "block";
+            document.getElementById("emailForm").style.display = "flex";
         }
         function subscribe() {
             const email = document.getElementById("email").value;
