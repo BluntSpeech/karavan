@@ -83,6 +83,7 @@
         .bar1 { background-color: #C3643F; }
         .bar2 { background-color: #F4A261; }
         .bar3 { background-color: #4E5E2E; }
+        .bar4 { background-color: #6B4226; }
         .subscribe-container {
             width: 100%;
             max-width: 400px;
@@ -165,32 +166,16 @@
         <div class="title">KARAVAN</div>
         <div class="box">
             <div class="left">
-                EXPERIMENTAL GAZETTE SECURED BY MULTI-LAYER ENCRYPTION
-                <div class="italic">Uncensored voices shape the future</div>
+                <b>Karavan — an independent experimental gazette publishing anonymous articles. Created for free expression of opinions and ideas, protected by multi-layer encryption, and funded exclusively by its readers.</b>
+                <div class="italic">Truth has no owner.</div>
             </div>
             <div class="right">
                 <div class="bar bar1">Ad-free forever</div>
                 <div class="bar bar2">Every word is human-made</div>
                 <div class="bar bar3">No hate or discrimination<br>(We're fed up with this irl)</div>
+                <div class="bar bar4">Support independent voices</div>
             </div>
         </div>
     </div>
-    <section class="subscribe-container">
-        <button class="subscribe-button" onclick="showEmailForm()">SUBSCRIBE</button>
-        <div id="emailForm">
-            <input type="email" id="email" placeholder="Enter your email">
-            <button class="send-button" onclick="subscribe()">SEND</button>
-        </div>
-    </section>
-    <script>
-        function showEmailForm() {
-            document.getElementById("emailForm").style.display = "flex";
-        }
-        function subscribe() {
-            const email = document.getElementById("email").value;
-            alert("Subscription confirmed for: " + email);
-            document.getElementById("emailForm").style.display = "none";
-        }
-    </script>
 </body>
 </html>
