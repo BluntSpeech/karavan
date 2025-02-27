@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KARAVAN</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Vollkorn:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@400&display=swap');
         
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Oswald', sans-serif;
-            background-color: #E4C1A4;
-            color: #1B1B1B;
+            font-family: 'Roboto', sans-serif;
+            background-color: #2B2B2B;
+            color: #EADDC8;
             line-height: 1.6;
         }
         .container {
@@ -23,32 +23,33 @@
         header {
             text-align: center;
             padding: 20px 0;
-            background-color: #1B1B1B;
-            color: #F2E1C2;
+            background-color: #3D2C2E;
+            color: #F5E8D7;
         }
         header h1 {
-            font-family: 'Vollkorn', serif;
-            font-size: 72px;
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
             margin: 0;
-            letter-spacing: 4px;
+            letter-spacing: 2px;
             text-transform: uppercase;
+            font-weight: 500;
         }
         nav {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 10px 0;
-            background-color: #2B4F70;
+            background-color: #7A4E48;
         }
         nav a {
             margin: 0 20px;
             text-decoration: none;
-            color: #F2E1C2;
+            color: #EADDC8;
             font-weight: bold;
             text-transform: uppercase;
         }
         nav a:hover {
-            color: #D24B2A;
+            color: #D2785E;
         }
         .main-content {
             display: flex;
@@ -59,39 +60,30 @@
             margin-right: 20px;
         }
         .article {
-            background-color: #F2E1C2;
+            background-color: #403A3A;
             padding: 20px;
             margin-bottom: 20px;
-            border-left: 8px solid #1B1B1B;
-            box-shadow: 6px 6px 0px #4A7023;
+            border-left: 8px solid #D2785E;
+            box-shadow: 6px 6px 0px #A67564;
         }
         .article h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 24px;
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
             margin: 0 0 10px;
-            color: #1B1B1B;
-        }
-        .article img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-        .article p {
-            font-size: 16px;
-            color: #1B1B1B;
+            color: #F5E8D7;
         }
         .sidebar {
             flex: 1;
-            background-color: #2B4F70;
+            background-color: #7A4E48;
             padding: 20px;
-            box-shadow: 6px 6px 0px #D24B2A;
-            color: #F2E1C2;
+            box-shadow: 6px 6px 0px #D2785E;
+            color: #F5E8D7;
         }
         .sidebar h3 {
-            font-family: 'Merriweather', serif;
-            font-size: 22px;
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
             margin: 0 0 15px;
-            color: #E4C1A4;
+            color: #F5E8D7;
             text-transform: uppercase;
         }
         .sidebar ul {
@@ -100,21 +92,15 @@
         }
         .sidebar ul li {
             margin-bottom: 10px;
-        }
-        .sidebar ul li a {
-            text-decoration: none;
-            color: #F2E1C2;
+            color: #EADDC8;
             font-weight: bold;
-        }
-        .sidebar ul li a:hover {
-            color: #D24B2A;
         }
         footer {
             text-align: center;
             padding: 20px 0;
             margin-top: 40px;
-            background-color: #2B4F70;
-            color: #F2E1C2;
+            background-color: #7A4E48;
+            color: #F5E8D7;
         }
     </style>
 </head>
@@ -122,7 +108,7 @@
     <header>
         <div class="container">
             <h1>KARAVAN</h1>
-            <p style="font-family: 'Oswald', sans-serif; font-size: 16px; margin-top: 5px; letter-spacing: 2px; text-transform: uppercase; font-style: italic; font-weight: 300;">The world is changing<br>Keep talking about what matters</p>
+            <p style="font-family: 'Roboto', sans-serif; font-size: 16px; margin-top: 5px; letter-spacing: 2px; text-transform: uppercase; font-style: italic; font-weight: 300;">The world is changing<br>Keep talking about what matters</p>
         </div>
     </header>
     <nav>
@@ -135,35 +121,23 @@
     <div class="container main-content">
         <div class="articles">
             <div class="article">
-                <img src="article1.jpg" alt="Article 1">
                 <h2>Breaking News: Major Event Shakes the World</h2>
-                <p class="meta">Published on October 10, 2023</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="article">
-                <img src="article1.jpg" alt="Article 1">
                 <h2>Breaking News: Major Event Shakes the World</h2>
-                <p class="meta">Published on October 10, 2023</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="article">
-                <img src="article1.jpg" alt="Article 1">
                 <h2>Breaking News: Major Event Shakes the World</h2>
-                <p class="meta">Published on October 10, 2023</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="article">
-                <img src="article1.jpg" alt="Article 1">
-                <h2>Breaking News: Major Event Shakes the World</h2>
-                <p class="meta">Published on October 10, 2023</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
         <div class="sidebar">
             <h3>Popular Articles</h3>
             <ul>
-                <li><a href="#">1. Бесит (женские уборные) интернет ии раньше был человеческим</a></li>
-                <li><a href="#">2. I spent the night as a homeless</a></li>
+                <li>1. Radical Perspectives</li>
+                <li>2. The Hidden Truth</li>
             </ul>
         </div>
     </div>
