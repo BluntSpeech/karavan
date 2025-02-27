@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KARAVAN</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dala+Floda&family=Roboto:wght@400&display=swap');
         
         body {
             margin: 0;
             padding: 0;
             font-family: 'Roboto', sans-serif;
-            background-color: #2B2B2B;
-            color: #EADDC8;
-            line-height: 1.6;
+            background-color: #FFFFFF;
+            color: #F2E6D8;
+            line-height: 1.85; letter-spacing: 0.2px;
         }
         .container {
             max-width: 1200px;
@@ -22,128 +22,144 @@
         }
         header {
             text-align: center;
-            padding: 20px 0;
-            background-color: #3D2C2E;
-            color: #F5E8D7;
+            padding: 30px 0;
+            background-color: #FFFFFF;
+            color: #1B1F3B;
         }
         header h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 64px;
+            font-size: 66px;
             margin: 0;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            font-weight: 500;
+            font-weight: 600;
         }
         nav {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 10px 0;
-            background-color: #7A4E48;
+            padding: 14px 0;
+            background: linear-gradient(135deg, #6C8FB0, #4B6A9A);
         }
         nav a {
             margin: 0 20px;
             text-decoration: none;
-            color: #EADDC8;
+            color: #1B1F3B;
             font-weight: bold;
             text-transform: uppercase;
+            transition: color 0.3s;
         }
         nav a:hover {
-            color: #D2785E;
+            color: #1B1F3B;
         }
         .main-content {
             display: flex;
-            margin-top: 20px;
+            margin-top: 25px;
         }
         .articles {
             flex: 3;
             margin-right: 20px;
         }
         .article {
-            background-color: #403A3A;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 8px solid #D2785E;
-            box-shadow: 6px 6px 0px #A67564;
+            background: linear-gradient(135deg, #F06A50, #D24B2A);
+            padding: 22px;
+            margin-bottom: 22px;
+            border-left: 12px solid #2F4F6F;
+            box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .article:hover {
+            transform: translateY(-5px); box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
         }
         .article h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            margin: 0 0 10px;
-            color: #F5E8D7;
+            font-size: 26px;
+            margin: 0 0 12px;
+            color: #1B1F3B;
         }
         .sidebar {
             flex: 1;
-            background-color: #7A4E48;
-            padding: 20px;
-            box-shadow: 6px 6px 0px #D2785E;
-            color: #F5E8D7;
+            background: linear-gradient(135deg, #8BA663, #6A7F3F);
+            padding: 22px;
+            box-shadow: 6px 6px 0px #2F4F6F;
+            color: #1B1F3B;
         }
         .sidebar h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            margin: 0 0 15px;
-            color: #F5E8D7;
+            font-size: 26px; font-weight: 700;
+            margin: 0 0 18px;
+            color: #1B1F3B;
             text-transform: uppercase;
-        }
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-        .sidebar ul li {
-            margin-bottom: 10px;
-            color: #EADDC8;
-            font-weight: bold;
         }
         footer {
             text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-            background-color: #7A4E48;
-            color: #F5E8D7;
+            padding: 25px 0;
+            margin-top: 45px;
+            background: linear-gradient(135deg, #6C8FB0, #4B6A9A);
+            color: #1B1F3B;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #EB5F48;
+            color: #FFFFFF;
+            padding: 14px 26px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 14px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background: linear-gradient(135deg, #6C8FB0, #4B6A9A);
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>KARAVAN</h1>
-            <p style="font-family: 'Roboto', sans-serif; font-size: 16px; margin-top: 5px; letter-spacing: 2px; text-transform: uppercase; font-style: italic; font-weight: 300;">The world is changing<br>Keep talking about what matters</p>
+            <h1 style="font-family: 'Dala Floda', serif; font-size: 74px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-weight: 800; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);">KARAVAN</h1>
+            <p style="font-style: italic; font-size: 22px; margin-top: 5px;">Experimental Independent Gazette<br>No ads. No AI. No agenda.</p>
         </div>
     </header>
     <nav>
-        <div class="container" style="display: flex; justify-content: center; gap: 50px;">
-            <a href="#">About Us</a>
-            <a href="#">Archive</a>
-            <a href="#">Support</a>
+        <div class="container">
+            <a href="#" style="color: #F2E6D8; font-weight: bold;">About Us</a>
+            <a href="#" style="color: #FFFFFF; font-weight: bold;">Archive</a>
+            <a href="#" style="color: #FFFFFF; font-weight: bold;">Support</a>
         </div>
     </nav>
     <div class="container main-content">
         <div class="articles">
             <div class="article">
                 <h2>Breaking News: Major Event Shakes the World</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <div class="article">
                 <h2>Breaking News: Major Event Shakes the World</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <div class="article">
                 <h2>Breaking News: Major Event Shakes the World</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
         </div>
         <div class="sidebar">
             <h3>Popular Articles</h3>
-            <ul>
-                <li>1. Radical Perspectives</li>
-                <li>2. The Hidden Truth</li>
-            </ul>
+            <p style="color: #F2E6D8;">Header 1</p>
+            <p style="color: #F2E6D8;">Header 2</p>
+            <p style="color: #F2E6D8;">Header 3</p>
+            <p style="color: #F2E6D8;">Header 4</p>
+            <p style="color: #F2E6D8;">Header 5</p>
+            <p style="color: #F2E6D8;">Header 6</p>
+            <p style="color: #F2E6D8;">Header 7</p>
+            <p style="color: #F2E6D8;">Header 8</p>
         </div>
     </div>
-    <footer>
+    <footer style="background: linear-gradient(135deg, #6C8FB0, #4B6A9A); color: #1B1F3B;">
         <div class="container">
-            <p>&copy; 2023 KARAVAN. All rights reserved.</p>
+            <p style="color: #FFFFFF; font-weight: bold;">&copy; 2025 KARAVAN. All rights reserved.</p>
+            <a href="#" class="cta-button">Subscribe</a>
         </div>
     </footer>
 </body>
