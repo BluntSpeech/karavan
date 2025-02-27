@@ -11,9 +11,10 @@
             margin: 0;
             padding: 0;
             font-family: 'Roboto', sans-serif;
-            background-color: #FFFFFF;
-            color: #F2E6D8;
-            line-height: 1.85; letter-spacing: 0.2px;
+            background-color: rgb(244, 229, 200);
+            color: rgb(244, 239, 219);
+            line-height: 1.85;
+            letter-spacing: 0.2px;
         }
         .container {
             max-width: 1200px;
@@ -22,140 +23,95 @@
         }
         header {
             text-align: center;
-            padding: 30px 0;
-            background-color: #FFFFFF;
-            color: #1B1F3B;
+            padding: 30px 0 5px;
+            background-color: rgb(20, 20, 50);
+            color: rgb(218, 205, 179);
         }
         header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 66px;
-            margin: 0;
-            letter-spacing: 3px;
+            font-family: 'Dala Floda', serif;
+            font-size: 90px;
+            font-weight: 800;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            font-weight: 600;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 14px 0;
-            background: linear-gradient(135deg, #6C8FB0, #4B6A9A);
-        }
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #1B1F3B;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #1B1F3B;
-        }
-        .main-content {
-            display: flex;
-            margin-top: 25px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+            margin-bottom: 2px;
+            color: rgb(244, 239, 219);
         }
         .articles {
-            flex: 3;
-            margin-right: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
         }
         .article {
-            background: linear-gradient(135deg, #F06A50, #D24B2A);
+            background: rgb(100, 15, 25);
             padding: 22px;
-            margin-bottom: 22px;
-            border-left: 12px solid #2F4F6F;
+            
             box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.15);
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .article:hover {
-            transform: translateY(-5px); box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
         }
         .article h2 {
             font-family: 'Playfair Display', serif;
             font-size: 26px;
             margin: 0 0 12px;
-            color: #1B1F3B;
-        }
-        .sidebar {
-            flex: 1;
-            background: linear-gradient(135deg, #8BA663, #6A7F3F);
-            padding: 22px;
-            box-shadow: 6px 6px 0px #2F4F6F;
-            color: #1B1F3B;
-        }
-        .sidebar h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 26px; font-weight: 700;
-            margin: 0 0 18px;
-            color: #1B1F3B;
-            text-transform: uppercase;
+            color: rgb(244, 239, 219);
         }
         footer {
             text-align: center;
             padding: 25px 0;
             margin-top: 45px;
-            background: linear-gradient(135deg, #6C8FB0, #4B6A9A);
-            color: #1B1F3B;
+            background: rgb(20, 20, 50);
+            color: rgb(244, 239, 219);
         }
-        .cta-button {
-            display: inline-block;
-            background-color: #EB5F48;
-            color: #FFFFFF;
-            padding: 14px 26px;
-            text-transform: uppercase;
-            font-weight: bold;
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            background: rgb(46, 74, 98);
+        }
+        nav a {
+            margin: 0 20px;
             text-decoration: none;
-            border-radius: 8px;
-            margin-top: 14px;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background: linear-gradient(135deg, #6C8FB0, #4B6A9A);
+            color: #FFFFFF;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 style="font-family: 'Dala Floda', serif; font-size: 74px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-weight: 800; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);">KARAVAN</h1>
-            <p style="font-style: italic; font-size: 22px; margin-top: 5px;">Experimental Independent Gazette<br>No ads. No AI. No agenda.</p>
+            <h1>KARAVAN</h1>
+            <p style="font-style: italic; font-size: 22px; margin-top: 2px; margin-bottom: 2px; color: rgb(244, 239, 219);">Experimental Independent Gazette<br>No ads. No AI. No agenda</p>
         </div>
     </header>
     <nav>
-        <div class="container">
-            <a href="#" style="color: #F2E6D8; font-weight: bold;">About Us</a>
-            <a href="#" style="color: #FFFFFF; font-weight: bold;">Archive</a>
-            <a href="#" style="color: #FFFFFF; font-weight: bold;">Support</a>
+        <a href="#">About Us</a>
+        <a href="#">Archive</a>
+        <a href="#">Support</a>
+    </nav>
+    <div class="container main-content">
+        <div class="articles" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="article"><h2>Article 1</h2><p>Content of article 1.</p></div>
+            <div class="article"><h2>Article 2</h2><p>Content of article 2.</p></div>
+            <div class="article"><h2>Article 3</h2><p>Content of article 3.</p></div>
+            <div class="article"><h2>Article 4</h2><p>Content of article 4.</p></div>
+            <div class="article"><h2>Article 5</h2><p>Content of article 5.</p></div>
+            <div class="article"><h2>Article 6</h2><p>Content of article 6.</p></div>
+            <div class="article"><h2>Article 7</h2><p>Content of article 7.</p></div>
+            <div class="article"><h2>Article 8</h2><p>Content of article 8.</p></div>
+            <div class="article"><h2>Article 9</h2><p>Content of article 9.</p></div>
+            <div class="article"><h2>Article 10</h2><p>Content of article 10.</p></div>
         </div>
-    
-        <div class="container main-content">
-        <div class="articles">
-            <div class="article">
-                <h2>Exclusive: Global Affairs & You</h2>
-                <p>Insightful analysis on today’s biggest issues.</p>
-            </div>
-            <div class="article">
-                <h2>The Future of Independent Journalism</h2>
-                <p>Why ad-free journalism is the way forward.</p>
-            </div>
-            <div class="article">
-                <h2>Hidden Narratives: What’s Behind the Headlines?</h2>
-                <p>Uncovering the truth behind media narratives.</p>
-            </div>
-        </div>
-        <div class="sidebar">
-            <h3>Popular Articles</h3>
-            <p>Deep Dive: Media Control & Influence</p>
-            <p>Behind the Scenes: The Story We Almost Missed</p>
-            <p>The Ethics of Journalism in a Digital Age</p>
-            <p>Letters to the Editor: Reader Insights</p>
-        </div>
+          
     </div>
     <footer>
         <div class="container">
-            <p>&copy; 2025 KARAVAN. All rights reserved.</p>
-            <a href="#" class="cta-button">Subscribe</a>
+            <p>&copy; 2025 KARAVAN. Not all rights are reserved. Unfortunately.</p>
         </div>
     </footer>
 </body>
