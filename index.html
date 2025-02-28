@@ -45,7 +45,6 @@
         .article {
             background: rgb(100, 15, 25);
             padding: 22px;
-            
             box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.15);
             transition: transform 0.2s, box-shadow 0.2s;
         }
@@ -73,12 +72,55 @@
             background: rgb(46, 74, 98);
         }
         nav a {
-            margin: 0 20px;
+            margin: 0 15px;
             text-decoration: none;
             color: #FFFFFF;
             font-weight: bold;
             text-transform: uppercase;
             transition: color 0.3s;
+            font-size: 14px;
+        }
+
+        /* Медиа-запросы для мобильных устройств */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 60px;
+            }
+            .container {
+                padding: 10px;
+            }
+            .articles {
+                grid-template-columns: 1fr;
+            }
+            .article {
+                padding: 15px;
+            }
+            .article h2 {
+                font-size: 22px;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 12px;
+            }
+            header p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 40px;
+            }
+            header p {
+                font-size: 16px;
+            }
+            .article h2 {
+                font-size: 20px;
+            }
+            nav a {
+                margin: 0 5px;
+                font-size: 11px;
+            }
         }
     </style>
 </head>
@@ -95,7 +137,7 @@
         <a href="#">Support</a>
     </nav>
     <div class="container main-content">
-        <div class="articles" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <div class="articles">
             <div class="article"><h2>Article 1</h2><p>Content of article 1.</p></div>
             <div class="article"><h2>Article 2</h2><p>Content of article 2.</p></div>
             <div class="article"><h2>Article 3</h2><p>Content of article 3.</p></div>
@@ -107,7 +149,6 @@
             <div class="article"><h2>Article 9</h2><p>Content of article 9.</p></div>
             <div class="article"><h2>Article 10</h2><p>Content of article 10.</p></div>
         </div>
-          
     </div>
     <footer>
         <div class="container">
