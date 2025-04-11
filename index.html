@@ -3,117 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORGE</title>
-    <link rel="icon" href="favicon.png" type="image/png"> <!-- Фавикон подключён правильно -->
+    <title>FORGE NEWS</title>
+    <link rel="icon" href="favicon.png" type="image/png">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --macadamia: #F4EDE4;
+            --cool-blue: #1E3A5F;
+            --redwood: #9B2226;
+            --caramel: #8D695D;
+            --darker-caramel: #6C4B3A;
+            --bright-caramel: #A07867; /* Новый более яркий цвет */
+        }
         
         body {
-            background-color: #F4EDE4; /* Macadamia */
-            color: #1E3A5F; /* Cool Blue */
+            background-color: var(--macadamia);
+            color: var(--cool-blue);
             font-family: 'Inter', sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
             min-height: 100vh;
-            text-align: center;
-            overflow-y: auto;
         }
         
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 8rem; /* Slightly reduced size */
-            color: #C53030; /* Затемнённый Redwood */
-            text-shadow: 3px 3px 10px rgba(255, 94, 0, 0.7); /* Softer Orange Glow */
-            margin: 50px 0 20px;
-            width: 100%;
+            font-size: 6rem; /* Увеличенный размер */
+            color: #C53030;
+            text-shadow: 3px 3px 8px rgba(255, 94, 0, 0.6);
+            margin: 20px 0 10px;
             text-align: center;
+            letter-spacing: -1px;
         }
         
         .tagline {
-            font-size: 1.6rem; /* Slightly larger */
-            font-weight: bold;
-            max-width: 850px; /* Wider max width */
-            margin: 20px 0 40px;
-            color: #1E3A5F; /* Cool Blue */
+            font-size: 1.2rem;
+            font-weight: 600;
+            max-width: 100%;
+            margin: 10px 0 5px;
+            color: var(--cool-blue);
+            text-transform: uppercase;
+            line-height: 1.3;
+            letter-spacing: 0.5px;
+        }
+        
+        .tagline-line2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0 0 5px 0;
+            color: var(--cool-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .principles {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0 0 25px 0;
+            color: var(--cool-blue);
+            letter-spacing: 0.5px;
             text-transform: uppercase;
         }
         
-        .nav {
+        /* Action Buttons */
+        .action-buttons {
             display: flex;
-            gap: 20px;
-            margin: 20px 0 40px;
-        }
-        
-        .nav a {
-            text-decoration: none;
-            color: #FFFFFF; /* White */
-            font-weight: bold;
-            font-size: 1.4rem; /* Adjusted size */
-            background: #8D695D; /* Caramel */
-            padding: 8px 14px; /* Adjusted padding */
-            border-radius: 6px;
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
-        
-        .nav a:hover {
-            background: #6C4B3A; /* Darker Caramel */
-            transform: scale(1.05); /* Slight hover effect */
-        }
-        
-        .sections {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 20px;
-            margin-bottom: 100px;
-        }
-        
-        .section {
-            border-radius: 10px;
-            padding: 30px;
-            width: 180px;
-            height: 130px;
-            display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
+            gap: 12px;
+            margin: 0 0 30px 0;
+            width: 100%;
+        }
+        
+        .btn {
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 12px 24px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 200px;
+        }
+        
+        .btn-primary {
+            background: #C53030;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #9B2226;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: var(--bright-caramel); /* Новый более яркий цвет */
+            color: white; /* Белый текст для лучшей читаемости */
+        }
+        
+        .btn-secondary:hover {
+            background: var(--caramel);
+            transform: translateY(-2px);
+        }
+        
+        /* Articles */
+        .articles {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+        
+        .article {
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            color: #F4EDE4; /* Macadamia */
+            transition: transform 0.3s ease;
+            color: var(--macadamia);
         }
         
-        .section:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        .article:hover {
+            transform: translateY(-3px);
         }
         
-        .section:nth-child(1) { background-color: #9B2226; } /* Redwood */
-        .section:nth-child(2) { background-color: #B83D02; } /* Burnt Umber */
-        .section:nth-child(3) { background-color: #1E3A5F; } /* Cool Blue */
-        .section:nth-child(4) { background-color: #6C89A7; } /* Light Grayish */
+        .article h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin: 0 0 12px 0;
+            line-height: 1.2;
+        }
+        
+        .article p {
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+        
+        /* Изменён порядок цветов статей */
+        #article1 { background-color: #1E3A5F; }
+        #article2 { background-color: #6C89A7; }
+        #article3 { background-color: #9B2226; }
+        #article4 { background-color: #B83D02; }
+        
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(30, 58, 95, 0.6);
+            width: 100%;
+            padding: 20px 0;
+            border-top: 1px solid rgba(30, 58, 95, 0.1);
+        }
     </style>
 </head>
 <body>
     <h1>FORGE</h1>
-    <p class="tagline">PROVOCATIVE JOURNALISM.<br>SPEAK FREELY, STAY PRIVATE.<br>NO AI. NO ADS. NO HATE.</p>
+    <p class="tagline">PROVOCATIVE JOURNALISM.</p>
+    <p class="tagline-line2">SPEAK FREELY,STAY PRIVATE</p>
+    <p class="principles">NO AI.NO ADS.NO HATE</p>
     
-    <div class="nav">
-        <a href="#about">ABOUT</a>
-        <a href="#privacy">PRIVACY</a>
-        <a href="#support">SUPPORT</a>
+    <!-- Центральная кнопка Subscribe -->
+    <div class="action-buttons">
+        <a href="#subscribe" class="btn btn-primary">SUBSCRIBE</a>
+        <div style="display: flex; gap: 12px;">
+            <a href="#support" class="btn btn-secondary">SUPPORT US</a>
+            <a href="#about" class="btn btn-secondary">ABOUT US</a>
+        </div>
     </div>
     
-    <div class="sections">
-        <div class="section">Rage</div>
-        <div class="section">Confession</div>
-        <div class="section">Havoc</div>
-        <div class="section">Colosseum</div>
+    <div class="articles">
+        <div class="article" id="article1">
+            <h2>Hostile Architecture: How Cities Weaponize Design</h2>
+            <p>The spike-studded benches and sloped bus stops aren't just ugly — they're part of a calculated war against the poor. We investigate the billion-dollar industry of anti-homeless infrastructure.</p>
+        </div>
+        
+        <div class="article" id="article2">
+            <h2>Your EX Knows You're Reading This</h2>
+            <p>Digital stalking has become the breakup ritual nobody talks about. From Spotify stalking to Venmo sleuthing, we reveal how 78% of people cyber-stalk their exes — and how to know if you're being watched.</p>
+        </div>
+        
+        <div class="article" id="article3">
+            <h2>Kardano: What Was That?!</h2>
+            <p>The crypto world's most bizarre keynote speech decoded. Was it a stroke? A cult initiation? Or just another day in Web3 theater? Our tech editor analyzes the 37-minute ramble that tanked KDA by 42%.</p>
+        </div>
+        
+        <div class="article" id="article4">
+            <h2>All Done</h2>
+            <p>The surprising psychology behind why we announce completed tasks nobody asked about. From Slack to Instagram, 'all done' culture reveals our deep need for validation — even for brushing our teeth.</p>
+        </div>
     </div>
+    
+    <footer>
+        FORGE 2025. No rights protected. Including yours.
+    </footer>
 </body>
 </html>
