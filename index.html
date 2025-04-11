@@ -50,20 +50,20 @@
         
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 4rem;
+            font-size: 5rem; /* Увеличенный размер для десктопа */
             color: #C53030;
             text-shadow: 3px 3px 8px rgba(255, 94, 0, 0.6);
-            margin: 15px 0 10px;
+            margin: 15px 0 15px; /* Увеличенный нижний отступ */
             text-align: center;
             letter-spacing: -1px;
             line-height: 1;
         }
         
         .tagline {
-            font-size: 1.5rem;
+            font-size: 1.5rem; /* Увеличенный размер */
             font-weight: 600;
             max-width: 100%;
-            margin: 5px 0;
+            margin: 10px 0 5px; /* Увеличенный отступ */
             color: var(--cool-blue);
             text-transform: uppercase;
             line-height: 1.3;
@@ -72,9 +72,9 @@
         }
         
         .tagline-line2 {
-            font-size: 1rem;
+            font-size: 1.2rem; /* Увеличенный размер */
             font-weight: 600;
-            margin: 0 0 5px 0;
+            margin: 5px 0 10px; /* Увеличенные отступы */
             color: var(--cool-blue);
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -82,9 +82,9 @@
         }
         
         .principles {
-            font-size: 1rem;
+            font-size: 1.1rem; /* Увеличенный размер */
             font-weight: 600;
-            margin: 0 0 20px 0;
+            margin: 10px 0 25px; /* Увеличенные отступы */
             color: var(--cool-blue);
             letter-spacing: 0.5px;
             text-transform: uppercase;
@@ -204,11 +204,23 @@
         
         @media (max-width: 480px) {
             h1 {
-                font-size: 6rem;
+                font-size: 3.5rem; /* Пропорционально уменьшенный размер */
+                margin: 15px 0 10px; /* Адаптированные отступы */
             }
             
-            .tagline, .tagline-line2, .principles {
-                font-size: 0.9rem;
+            .tagline {
+                font-size: 1.1rem; /* Пропорционально уменьшенный размер */
+                margin: 8px 0 4px;
+            }
+            
+            .tagline-line2 {
+                font-size: 0.9rem; /* Пропорционально уменьшенный размер */
+                margin: 4px 0 8px;
+            }
+            
+            .principles {
+                font-size: 0.9rem; /* Пропорционально уменьшенный размер */
+                margin: 8px 0 20px;
             }
             
             .btn {
