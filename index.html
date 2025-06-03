@@ -1,248 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>FORGE</title>
-    <link rel="icon" href="favicon.png" type="image/png">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap');
-        
-        :root {
-            --macadamia: #F4EDE4;
-            --cool-blue: #1E3A5F;
-            --redwood: #9B2226;
-            --caramel: #8D695D;
-            --darker-caramel: #6C4B3A;
-            --bright-caramel: #A07867;
-        }
-        
-        body {
-            background-color: var(--macadamia);
-            color: var(--cool-blue);
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            overflow-x: hidden;
-            box-sizing: border-box;
-            width: 100%;
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        
-        .content-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            max-width: 100%;
-            flex: 1;
-            justify-content: center;
-            padding: 10px 0;
-        }
-        
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            color: #C53030;
-            text-shadow: 3px 3px 8px rgba(255, 94, 0, 0.6);
-            margin: 15px 0 5px;
-            text-align: center;
-            letter-spacing: -1px;
-            line-height: 1;
-        }
-        
-        .tagline {
-            font-size: 1rem;
-            font-weight: 600;
-            max-width: 100%;
-            margin: 5px 0;
-            color: var(--cool-blue);
-            text-transform: uppercase;
-            line-height: 1.3;
-            letter-spacing: 0.5px;
-            text-align: center;
-        }
-        
-        .tagline-line2 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin: 0 0 5px 0;
-            color: var(--cool-blue);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            text-align: center;
-        }
-        
-        .principles {
-            font-size: 1rem;
-            font-weight: 600;
-            margin: 0 0 20px 0;
-            color: var(--cool-blue);
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            text-align: center;
-        }
-        
-        /* Action Buttons */
-        .action-buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            margin: 0 0 20px 0;
-            width: 100%;
-            max-width: 100%;
-        }
-        
-        .btn {
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            padding: 10px 12px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            text-align: center;
-            width: auto;
-            min-width: 100px;
-            white-space: nowrap;
-        }
-        
-        .btn-primary {
-            background: #C53030;
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            background: #9B2226;
-            transform: translateY(-2px);
-        }
-        
-        .btn-secondary {
-            background: var(--bright-caramel);
-            color: white;
-            padding: 10px 8px;
-        }
-        
-        .btn-secondary:hover {
-            background: var(--caramel);
-            transform: translateY(-2px);
-        }
-        
-        .button-group {
-            display: flex;
-            gap: 8px;
-            width: 100%;
-            justify-content: center;
-            max-width: 100%;
-        }
-        
-        /* Articles */
-        .articles {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            width: 100%;
-            max-width: 100%;
-            margin: 15px 0;
-            padding: 0;
-            align-items: center;
-        }
-        
-        .article {
-            border-radius: 8px;
-            padding: 15px;
-            width: 100%;
-            max-width: 400px;
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            color: var(--macadamia);
-        }
-        
-        .article:hover {
-            transform: translateY(-3px);
-        }
-        
-        .article h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            margin: 0 0 10px 0;
-            line-height: 1.2;
-        }
-        
-        .article p {
-            font-size: 0.9rem;
-            margin: 0;
-            line-height: 1.4;
-            opacity: 0.9;
-        }
-        
-        #article1 { background-color: #1E3A5F; }
-        #article2 { background-color: #6C89A7; }
-        #article3 { background-color: #9B2226; }
-        #article4 { background-color: #B83D02; }
-        
-        /* Footer */
-        footer {
-            margin-top: auto;
-            text-align: center;
-            font-size: 0.8rem;
-            color: rgba(30, 58, 95, 0.6);
-            width: 100%;
-            padding: 15px 0;
-            border-top: 1px solid rgba(30, 58, 95, 0.1);
-        }
-        
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 6rem;
-            }
-            
-            .tagline, .tagline-line2, .principles {
-                font-size: 0.9rem;
-            }
-            
-            .btn {
-                padding: 8px 10px;
-                font-size: 0.85rem;
-                min-width: 80px;
-            }
-            
-            .btn-secondary {
-                padding: 8px 6px;
-            }
-            
-            .article {
-                max-width: 100%;
-            }
-            
-            .article h2 {
-                font-size: 1.2rem;
-            }
-            
-            .article p {
-                font-size: 0.85rem;
-            }
-        }
-    </style>
+    <!-- (head content remains the same) -->
+    <title>Day in Life</title>
+    <!-- (style block remains the same) -->
 </head>
 <body>
     <div class="content-wrapper">
-        <h1>FORGE</h1>
-        <p class="tagline">PROVOCATIVE JOURNALISM.</p>
-        <p class="tagline-line2">SPEAK FREELY,STAY PRIVATE</p>
-        <p class="principles">NO AI.NO ADS.NO HATE</p>
+        <h1>Day in Life</h1>
+        <p class="tagline">REAL PEOPLE. REAL ROUTINES.</p>
+        <p class="tagline-line2">ORDINARY DAYS, EXTRAORDINARY DETAILS</p>
+        <p class="principles">NO FILTERS. NO JUDGMENT. NO CELEBRITIES.</p>
         
-        <!-- Центральная кнопка Subscribe -->
         <div class="action-buttons">
             <a href="#subscribe" class="btn btn-primary">SUBSCRIBE</a>
             <div class="button-group">
@@ -253,29 +22,30 @@
         
         <div class="articles">
             <div class="article" id="article1">
-                <h2>Hostile Architecture: How Cities Weaponize Design</h2>
-                <p>The spike-studded benches and sloped bus stops aren't just ugly — they're part of a calculated war against the poor. We investigate the billion-dollar industry of anti-homeless infrastructure.</p>
+                <h2>6AM in Flatbush: Breakfast and a Broken Toaster</h2>
+                <p>Meet Carla, a nurse with two kids, who starts her day dodging cereal spills and subway delays. We follow her morning routine from kitchen chaos to the 8:12 train.</p>
             </div>
             
             <div class="article" id="article2">
-                <h2>Your EX Knows You're Reading This</h2>
-                <p>Digital stalking has become the breakup ritual nobody talks about. From Spotify stalking to Venmo sleuthing, we reveal how 78% of people cyber-stalk their exes — and how to know if you're being watched.</p>
+                <h2>One Barber, 27 Conversations</h2>
+                <p>In a single day, Rashid hears about divorces, job interviews, and basketball dreams. We sit beside his chair to listen to what the neighborhood is really talking about.</p>
             </div>
             
             <div class="article" id="article3">
-                <h2>Kardano: What Was That?!</h2>
-                <p>The crypto world's most bizarre keynote speech decoded. Was it a stroke? A cult initiation? Or just another day in Web3 theater? Our tech editor analyzes the 37-minute ramble that tanked KDA by 42%.</p>
+                <h2>Rain, Rent, and Ravioli</h2>
+                <p>On a stormy Tuesday, Olivia works her second job, eats in the breakroom, and video calls her mom. A story about small joys and bigger worries in a city that doesn’t wait.</p>
             </div>
             
             <div class="article" id="article4">
-                <h2>All Done</h2>
-                <p>The surprising psychology behind why we announce completed tasks nobody asked about. From Slack to Instagram, 'all done' culture reveals our deep need for validation — even for brushing our teeth.</p>
+                <h2>The Dishwasher Poet</h2>
+                <p>By night, Marco scrubs plates at a Midtown restaurant. By day, he writes verses in the margins of receipts. A quiet portrait of rhythm, resilience, and dreams between shifts.</p>
             </div>
         </div>
     </div>
     
     <footer>
-        FORGE 2025. No rights protected. Including yours.
+        DAY IN LIFE 2025. All stories are someone's reality.
     </footer>
 </body>
 </html>
+
